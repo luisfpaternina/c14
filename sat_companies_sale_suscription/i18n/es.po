@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 17:44+0000\n"
-"PO-Revision-Date: 2022-02-28 17:44+0000\n"
+"POT-Creation-Date: 2022-02-28 18:36+0000\n"
+"PO-Revision-Date: 2022-02-28 18:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,7 @@ msgstr "Número de cuenta"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction
 msgid "Action Needed"
 msgstr ""
 
@@ -47,12 +48,28 @@ msgid "All risk"
 msgstr "Todo riesgo"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__date
+msgid "Amount date"
+msgstr "Fec.Consignación"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__demand_line_ids
+msgid "Amounts"
+msgstr "Importes"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__apr
 msgid "April"
 msgstr "Abril"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
 
@@ -94,11 +111,13 @@ msgstr "Crear nuevo registro"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_date
 msgid "Created on"
 msgstr "Creado en"
 
@@ -143,6 +162,16 @@ msgid "December"
 msgstr "Diciembre"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__demand_id
+msgid "Demand"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model,name:sat_companies_sale_suscription.model_subscription_demand_amount
+msgid "Demand amount"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__code
 msgid "Demand number"
 msgstr "N° demanda"
@@ -168,6 +197,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
@@ -175,6 +205,11 @@ msgstr "Nombre mostrado"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__email
 msgid "Email"
 msgstr "Correo"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_embargo
+msgid "Embargo"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__exclude_months
@@ -188,16 +223,19 @@ msgstr "Febrero"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_follower_ids
 msgid "Followers"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_channel_ids
 msgid "Followers (Channels)"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
 
@@ -241,18 +279,23 @@ msgstr "Datos generales 2"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__id
 msgid "ID"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
@@ -263,6 +306,7 @@ msgstr "Información tipo contrato"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_is_follower
 msgid "Is Follower"
 msgstr ""
 
@@ -301,21 +345,25 @@ msgstr "Junio"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
 
@@ -341,16 +389,19 @@ msgstr "Mayo"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error
 msgid "Message Delivery error"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_ids
 msgid "Messages"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -366,6 +417,7 @@ msgid "Normal"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__notes
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "Notes"
 msgstr "Notas"
@@ -377,30 +429,36 @@ msgstr "Noviembre"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__observations
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "Observations"
 msgstr "Observaciones"
@@ -417,6 +475,7 @@ msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__partner_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "Partner"
 msgstr "Contacto"
 
@@ -442,6 +501,7 @@ msgstr "Plantilla de presupuesto"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
 
@@ -530,11 +590,13 @@ msgstr "tipo de contrato"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread
 msgid "Unread Messages"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
 
@@ -546,10 +608,17 @@ msgstr "Validar si el contacto es potencial!"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__website_message_ids
 msgid "Website Messages"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__website_message_ids
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__website_message_ids
 msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
+msgid "amount"
 msgstr ""
