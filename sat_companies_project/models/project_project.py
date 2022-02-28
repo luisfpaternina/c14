@@ -5,9 +5,16 @@ from datetime import tzinfo, timedelta, datetime
 class ProjectProject(models.Model):
     _inherit = 'project.project'
     
-    sale_type_origin_id = fields.Many2one('sale.order.type','Sale Type Origin')
-    sale_order_id = fields.Many2one('sale.order', 'Sale Order')
-    start_date_project = fields.Datetime('Start date project')
+    sale_type_origin_id = fields.Many2one(
+        'sale.order.type',
+        'Sale Type Origin')
+    sale_order_id = fields.Many2one(
+        'sale.order',
+        'Sale Order')
+    start_date_project = fields.Datetime(
+        'Start date project')
+    location_count = fields.Integer(
+        string="Location count")
 
 
     def update_fields_service_dates(self):
