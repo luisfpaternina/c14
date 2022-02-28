@@ -73,6 +73,19 @@
                                     <group>
                                         <field name="inspection_report_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                     </group>
+                                    <group>
+                                        <field name="is_claim"/>
+                                    </group>
+                                    <group>
+                                        <field name="claim_date"/>
+                                        <field name="reception_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="delivery_name"/>
+                                    </group>
+                                    <group>
+                                        <field name="telephone"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="General dates 2">
