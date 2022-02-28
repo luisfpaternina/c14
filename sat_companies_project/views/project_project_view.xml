@@ -12,7 +12,15 @@
                 </group>
             </xpath>
 
-            
+            <div name="button_box" position="inside">
+                <button 
+                    class="oe_stat_button" 
+                    type="object" 
+                    name="get_location"
+                    icon="fa-car">
+                    <field string="Locations" name="location_count" widget="statinfo"/>
+                </button>
+            </div>
 
         </field>
     </record>

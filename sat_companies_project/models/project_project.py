@@ -17,6 +17,18 @@ class ProjectProject(models.Model):
         string="Location count")
 
 
+    def get_location(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Locations',
+            'view_mode': 'tree',
+            'res_model': 'stock.location',
+            'domain': [('project_id', '=', self.id)],
+            'context': "{'create': False}"
+        }
+
+
     def update_fields_service_dates(self):
         for record in self:
             dates_begin = [x.planned_date_begin for x in record.task_ids]
