@@ -50,3 +50,7 @@ class SaleSuscriptionDemand(models.Model):
         'subscription.demand.amount',
         'demand_id',
         string="Amounts")
+    subscription_type_id = fields.Many2one(
+        'stock.gadgets.contract.type',
+        string="Subscription type",
+        tracking=True)
