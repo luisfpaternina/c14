@@ -37,3 +37,6 @@ class SaleSuscriptionDemand(models.Model):
     city = fields.Char(
         string="Population",
         related="partner_id.city")
+    is_embargo = fields.Boolean(
+        string="Embargo",
+        tracking=True)
