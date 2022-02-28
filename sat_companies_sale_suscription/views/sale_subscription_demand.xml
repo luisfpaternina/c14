@@ -97,7 +97,13 @@
                                         <field name="compensation_total"/>
                                     </group>
                                     <group>
+                                        
+                                    </group>
+                                    <group>
                                         <field name="is_demand"/>
+                                    </group>
+                                    <group>
+                                        
                                     </group>
                                 </group>
                             </page>
