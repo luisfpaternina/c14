@@ -6,3 +6,4 @@ from . import sale_subscription
 from . import res_bank
 from . import res_partner
 from . import sale_subscription_log
+from . import sale_subscription_demand
