@@ -30,7 +30,7 @@
                         class="oe_highlight"
                         string="Send Contrat to signature"
                         attrs="{'invisible': ['|',('contract_send', '=', True),('state', '!=', 'sent')]}"/>
-                <button name="action_send_email" string="Send by email" type="object"/>
+                <button name="action_send_email" string="Send contract suspension" type="object"/>
             </xpath>
 
             <xpath expr="//form/sheet/group[1]/group[2]/field[(@name='payment_term_id')]" position="after"> 

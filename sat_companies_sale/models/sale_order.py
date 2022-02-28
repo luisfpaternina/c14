@@ -196,7 +196,7 @@ class SaleOrder(models.Model):
         ir_model_data = self.env['ir.model.data']
         try:
             template_id = \
-            ir_model_data.get_object_reference('test_email', 'email_template')[1]
+            ir_model_data.get_object_reference('test_email', 'email_template_contract_suspension')[1]
         except ValueError:
             template_id = False
         try:
