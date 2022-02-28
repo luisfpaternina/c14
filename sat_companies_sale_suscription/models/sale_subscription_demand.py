@@ -24,3 +24,9 @@ class SaleSuscriptionDemand(models.Model):
     street = fields.Char(
         related="partner_id.street",
         string="Address")
+    phone = fields.Char(
+        related="partner_id.mobile",
+        string="Phone")
+    email = fields.Char(
+        string="Email",
+        related="partner_id.email")
