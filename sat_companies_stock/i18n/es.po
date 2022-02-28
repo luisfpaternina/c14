@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 14:23+0000\n"
-"PO-Revision-Date: 2022-02-25 14:23+0000\n"
+"POT-Creation-Date: 2022-02-28 12:45+0000\n"
+"PO-Revision-Date: 2022-02-28 12:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -812,6 +812,7 @@ msgstr "Nombre delegación"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__display_name
@@ -1144,6 +1145,7 @@ msgstr "Fecha alta call center"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__id
@@ -1295,6 +1297,11 @@ msgid "Inspection years"
 msgstr "Años inspección"
 
 #. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__invoice_start_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__invoice_start_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__invoice_start_date
@@ -1342,7 +1349,7 @@ msgstr "Es Seguidor"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__is_potential_client
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__is_potential_client
 msgid "Is a potential client"
-msgstr "Cliente potencial"
+msgstr "Contacto potencial"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_cabin_puffer
@@ -1502,6 +1509,7 @@ msgstr "Tipo cerradura rellano"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type____last_update
@@ -2076,6 +2084,11 @@ msgid "Operator strap"
 msgstr "Correa operador"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__partner_id
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_type_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_type_id
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
@@ -2167,6 +2180,11 @@ msgstr "Plantilla de producto"
 #: model:ir.model.fields,help:sat_companies_stock.field_account_payment__subscription_template_id
 msgid "Product will be included in a selected template"
 msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__project_id
+msgid "Project"
+msgstr "Proyecto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_cabine_image
