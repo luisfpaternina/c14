@@ -40,3 +40,9 @@ class SaleSuscriptionDemand(models.Model):
     is_embargo = fields.Boolean(
         string="Embargo",
         tracking=True)
+    observations = fields.Text(
+        string="Observations",
+        tracking=True)
+    notes = fields.Text(
+        string="Notes",
+        tracking=True)
