@@ -6,14 +6,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-23 10:50+0000\n"
-"PO-Revision-Date: 2022-02-23 10:50+0000\n"
+"POT-Creation-Date: 2022-02-28 15:26+0000\n"
+"PO-Revision-Date: 2022-02-28 15:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.email_template_contract_suspension
+msgid ""
+"\n"
+"                <p>Hi</p>\n"
+"                <br/>\n"
+"                <p>Here is the details of open invoices</p>\n"
+"                <br/>\n"
+"                 \n"
+"           "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.email_template
+msgid ""
+"\n"
+"                <p>Hi</p>\n"
+"                <br/>\n"
+"                <p>Here is the details</p>\n"
+"                <br/>\n"
+"                 \n"
+"           "
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:mail.template,report_name:sat_companies_sale.email_contract_signature
@@ -28,6 +52,14 @@ msgstr ""
 #. module: sat_companies_sale
 #: model:ir.actions.report,print_report_name:sat_companies_sale.action_email_contract_signature
 msgid "'Test Contrato - %s' % (object.name)"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid ""
+"*Las medidas de cabina son orientativas y no vinculantes\n"
+"                            <br/>\n"
+"                            ACEPTADO"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -220,6 +252,11 @@ msgid "<strong>CONTRATO DE MANTENIMIENTO T - R</strong>"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Cabina</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid ""
 "<strong>Consentimiento.</strong> En ELCHE a "
@@ -250,8 +287,23 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Dimensiones:</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Domicilio de la obra</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "<strong>FIRMADO.</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Fecha</strong>"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -269,6 +321,11 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Maniobra</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "<strong>NO</strong> quiero"
 msgstr ""
@@ -278,6 +335,26 @@ msgstr ""
 msgid ""
 "<strong>Plazo de Conservación.</strong>\n"
 "                                    ¬Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Población/Provincia</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Presupuesto nº</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Puertas cabina:</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Puertas de piso:</strong>"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -291,7 +368,6 @@ msgid "<strong>Serki Instalaciones y Servicios, S. L </strong>"
 msgstr ""
 
 #. module: sat_companies_sale
-#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_suspension_contract
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_suspension_contract
 msgid "<strong>Suspensión de Contrato</strong>"
 msgstr ""
@@ -333,6 +409,31 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de paños:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de suelo:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de techo:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Accionamiento:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_needaction
 msgid "Action Needed"
@@ -366,6 +467,16 @@ msgid "All risk"
 msgstr "Todo riesgo"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Ancho de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Ancho de hueco:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
 msgid "Asesoramiento jurídico"
@@ -388,6 +499,16 @@ msgstr "Fecha de asignación"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_attachment_count
 msgid "Attachment Count"
 msgstr "Cuenta adjunta"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Botonera de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Botoneras exteriores:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
@@ -417,6 +538,11 @@ msgstr "Etapas del CRM"
 #. module: sat_companies_sale
 #: model:ir.actions.report,name:sat_companies_sale.id_template_gadget_document
 msgid "Características del aparato"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Carga útil:"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -478,6 +604,12 @@ msgstr "Código"
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__companies
 msgid "Companies/builders"
 msgstr "Compañias/constructoras"
+
+#. module: sat_companies_sale
+#: code:addons/sat_companies_sale/models/sale_order.py:0
+#, python-format
+msgid "Compose Email"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
@@ -560,6 +692,11 @@ msgstr ""
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "DATOS CONTRATO ANTERIOR:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "DATOS TECNICOS PRINCIPALES"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -667,6 +804,11 @@ msgid "Email medium"
 msgstr "Medio de correo electrónico"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Embarques en cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Empresa Mantenedora……………………………………………………………………………………"
 msgstr ""
@@ -730,11 +872,6 @@ msgid "Fdo. Presidente de la Comunidad"
 msgstr ""
 
 #. module: sat_companies_sale
-#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
-msgid "Fecha"
-msgstr ""
-
-#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Fecha Contrato  ………/………/………       Duración contrato…………………..años"
 msgstr ""
@@ -766,6 +903,16 @@ msgstr "Seguidores (Canales)"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Fondo cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Fondo de hueco:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_forecast_made
@@ -1011,6 +1158,11 @@ msgid "Messages"
 msgstr "Mensajes"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Modelo:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__sale_type__mounting
 msgid "Mounting"
 msgstr "Montaje"
@@ -1112,6 +1264,16 @@ msgid "Number of unread messages"
 msgstr "Número de mensajes no leídos"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Número de accesos:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Número de paradas:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
@@ -1178,6 +1340,21 @@ msgid "Pago trimestral Actual……………………………………………
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Paracaídas en contrapeso:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Pasamanos:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Paso libre:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__pdf_file_sale_contract
 msgid "Pdf File Sale Contract"
 msgstr "PDF contrato"
@@ -1186,6 +1363,11 @@ msgstr "PDF contrato"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__people_numbers
 msgid "People numbers"
 msgstr "Número de personas"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Personas:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__population_id
@@ -1203,6 +1385,11 @@ msgid "Por nuestra parte le remitiremos la factura de la forma acordada."
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Posicional de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__managed_by__president
 msgid "President"
 msgstr "Presidente"
@@ -1214,13 +1401,18 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
-msgid "Presupuesto nº"
+msgid "Profundidad de foso:"
 msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__public_organisms
 msgid "Public organisms"
 msgstr "Organismos publicos"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Pulsadores:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__quote_date_sent
@@ -1249,10 +1441,31 @@ msgid "REF QUOTATION"
 msgstr "REFERENCIA COTIZACIÓN"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "REF.SB33SP"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid ""
 "REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES\n"
 "                                LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Recorrido de seguridad:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Recorrido:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.email_template
+#: model:mail.template,subject:sat_companies_sale.email_template_contract_suspension
+msgid "Ref ${object.name or 'n/a' }"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -1273,7 +1486,6 @@ msgstr "Título del reporte"
 
 #. module: sat_companies_sale
 #: model:ir.actions.report,name:sat_companies_sale.id_subscription_suspension_contract
-#: model:ir.actions.report,name:sat_companies_sale.id_template_sale_suspension_contract
 msgid "Resolución / Suspensión de Contrato"
 msgstr ""
 
@@ -1350,6 +1562,11 @@ msgid "Send Email to Contact"
 msgstr "Enviar correo con contrato"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Send contract suspension"
+msgstr "ENVIAR SUSPENSION DE CONTRATO"
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
 msgid "Servicio de apuesta en marcha"
@@ -1380,6 +1597,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__family_home
 msgid "Single-family private homes"
 msgstr "Viviendas Particulares Unifamiliares"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Situación de máquina:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__stage_days
@@ -1503,6 +1725,11 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Unidades:______________   Tipo:_____"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_unread
 msgid "Unread Messages"
@@ -1523,6 +1750,11 @@ msgstr "Cargar archivo"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_validate_days
 msgid "Validate days"
 msgstr "Validar días"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Velocidad:"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__website_message_ids
