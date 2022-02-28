@@ -236,7 +236,7 @@
                              <strong>FECHA DE ENTREGA</strong>
                            </div>
                            <div id="field_fecha_entrega" style="border-top-style: none;">
-                             <span></span>
+                             <span t-field="o.date_order"></span>
                            </div>
                            <div id="referencia">
                              <strong>REFERENCIA</strong>
