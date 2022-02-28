@@ -14,7 +14,12 @@ class ProjectProject(models.Model):
     start_date_project = fields.Datetime(
         'Start date project')
     location_count = fields.Integer(
-        string="Location count")
+        string="Location count",
+        compute="compute_count")
+
+    def compute_count(self):
+        for record in self:
+            record.location_count = self.env['stock.location'].search_count([('project_id', '=', self.id)])
 
 
     def get_location(self):
