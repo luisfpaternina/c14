@@ -43,7 +43,7 @@
                         <notebook colspan="4">
                             <page string="General dates">
                                 <group>
-                                    <group>
+                                    <group string="Partner">
                                         <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                         <field name="street"/>
                                         <field name="city"/>
