@@ -204,7 +204,7 @@ class SaleOrder(models.Model):
         except ValueError:
             compose_form_id = False
         ctx = {
-        'default_model': 'test.email',
+        'default_model': 'sale.order',
         'default_res_id': self.ids[0],
         'default_use_template': bool(template_id),
         'default_template_id': template_id,
