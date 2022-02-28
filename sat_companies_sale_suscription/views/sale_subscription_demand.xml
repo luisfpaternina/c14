@@ -60,10 +60,14 @@
                                 
                             </page>
                             <page string="Observations">
-                                
+                                <group>
+                                    <field name="Observations" placeholder="Observations"/>
+                                </group>
                             </page>
                             <page string="Notes">
-                                
+                                <group>
+                                    <field name="notes" placeholder="Notes"/>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
