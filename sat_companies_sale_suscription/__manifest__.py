@@ -24,6 +24,8 @@
 
     'data': [
 
+        'security/security.xml',
+        #'security/ir.model.access.csv',
         'data/stock.gadgets.contract.type.csv',
         'data/product_template_data.xml',
         'views/sale_suscription_template_view.xml',
