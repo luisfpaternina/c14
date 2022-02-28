@@ -17,7 +17,9 @@
         'sale_subscription',
         'sat_companies_sale',
         'sat_companies_stock',
-        'sat_companies_project'
+        'sat_companies_project',
+        'contacts',
+        'sale_management'
     ],
 
     'data': [
