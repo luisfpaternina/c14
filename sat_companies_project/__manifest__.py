@@ -37,7 +37,7 @@
         'data/project_template_inspection_notice.xml',
         'data/project_template_new_task.xml',
         'data/action_automated_new_field_service.xml',
-        'data/stock.sale.order.type.csv',
+        'data/sale.order.type.csv',
         
     ],
     'installable': True
