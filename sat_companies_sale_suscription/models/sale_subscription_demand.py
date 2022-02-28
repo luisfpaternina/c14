@@ -30,3 +30,10 @@ class SaleSuscriptionDemand(models.Model):
     email = fields.Char(
         string="Email",
         related="partner_id.email")
+    state_id = fields.Many2one(
+        'res.country.state',
+        string="State",
+        related="partner_id.state_id")
+    city = fields.Char(
+        string="Population",
+        related="partner_id.city")
