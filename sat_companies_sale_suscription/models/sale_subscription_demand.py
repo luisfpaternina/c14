@@ -8,6 +8,12 @@ class SaleSuscriptionDemand(models.Model):
     _description = 'Demands'
     _rec_name = 'code'
 
-    name = fields.Char(string="Name")
-    code = fields.Char(string="Demand number")
-    date = fields.Date(string="Date")
+    name = fields.Char(
+        string="Name",
+        tracking=True)
+    code = fields.Char(
+        string="Demand number",
+        tracking=True)
+    date = fields.Date(
+        string="Date",
+        tracking=True)
