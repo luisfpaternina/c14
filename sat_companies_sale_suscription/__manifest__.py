@@ -35,6 +35,7 @@
         'views/sale_order_view.xml',
         'views/res_partner.xml',
         'views/sale_subscription_demand.xml',
+        'views/subscription_reason_change.xml',
         
     ],
     'installable': True
