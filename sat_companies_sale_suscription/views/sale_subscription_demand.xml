@@ -51,6 +51,9 @@
                                         <field name="phone"/>
                                         <field name="email"/>
                                     </group>
+                                    <group>
+                                        <field name="is_embargo"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="General dates 2">
