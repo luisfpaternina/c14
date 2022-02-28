@@ -12,7 +12,7 @@ class SuscriptionDemandAmount(models.Model):
     amount = fields.Float(
         string="Amount")
     date = fields.Date(
-        string="Date",
+        string="Amount date",
         tracking=True)
     demand_id = fields.Many2one(
         'sale.subscription.demand',
