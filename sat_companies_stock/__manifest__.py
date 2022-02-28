@@ -53,6 +53,7 @@
         'views/stock_gsm_model.xml',
         'views/stock_landing_key.xml',
         'views/stock_state_record.xml',
+        'views/stock_location.xml',
         'reports/technical_data_template.xml',
         
     ],
