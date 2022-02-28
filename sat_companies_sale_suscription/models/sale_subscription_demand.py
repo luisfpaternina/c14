@@ -46,3 +46,7 @@ class SaleSuscriptionDemand(models.Model):
     notes = fields.Text(
         string="Notes",
         tracking=True)
+    demand_line_ids = fields.One2many(
+        'subscription.demand.amount',
+        'demand_id',
+        string="Amounts")
