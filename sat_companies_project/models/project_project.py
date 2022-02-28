@@ -17,6 +17,7 @@ class ProjectProject(models.Model):
         string="Location count",
         compute="compute_count")
 
+
     def compute_count(self):
         for record in self:
             record.location_count = self.env['stock.location'].search_count([('project_id', '=', self.id)])
@@ -48,7 +49,8 @@ class ProjectProject(models.Model):
                         else:
                             task.planned_date_begin = task.planned_date_begin + timedelta(days=diff_dates.days)
                             task.planned_date_end = task.planned_date_end + timedelta(days=diff_dates.days)
-    
+
+
     def write(self,vals):
         update_dates = False
         if 'start_date_project' in vals:

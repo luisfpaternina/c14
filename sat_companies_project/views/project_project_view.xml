@@ -17,7 +17,7 @@
                     class="oe_stat_button" 
                     type="object" 
                     name="get_location"
-                    icon="fa-car">
+                    icon="fa-truck">
                     <field string="Locations" name="location_count" widget="statinfo"/>
                 </button>
             </div>
