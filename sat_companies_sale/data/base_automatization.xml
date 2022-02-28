@@ -23,6 +23,7 @@
         <field name="filter_domain">["|",["medium_id.name","=","Website"],["medium_id.name","=","Email"]]</field>
     </record>
 
+    <!--
     <record id="automatization_sat_companies_crm_lead_max_days" model="base.automation">
         <field name="name">Notificación responsable del departamento</field>
         <field name="model_id" ref="crm.model_crm_lead"/>
@@ -32,6 +33,7 @@
         <field name="template_id" ref="sat_companies_sale.template_crm_lead_max_days_notify"/>
         <field name="filter_domain"></field>
     </record>
+-->
 
     
 </odoo>
