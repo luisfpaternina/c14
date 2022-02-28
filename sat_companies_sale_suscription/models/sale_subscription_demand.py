@@ -54,3 +54,7 @@ class SaleSuscriptionDemand(models.Model):
         'stock.gadgets.contract.type',
         string="Subscription type",
         tracking=True)
+    reason_change_id = fields.Many2one(
+        'subscription.reason.change',
+        string="Reason change",
+        tracking=True)
