@@ -80,3 +80,15 @@ class SaleSuscriptionDemand(models.Model):
     is_compensation = fields.Boolean(
         string="Compensation",
         tracking=True)
+    trimester = fields.Char(
+        string="Trimester",
+        tracking=True)
+    imp_trimester = fields.Float(
+        string="Imp.Trimestal",
+        tracking=True)
+    compensation_total = fields.Float(
+        string="Total compensation",
+        tracking=True)
+    is_demand = fields.Boolean(
+        string="Is demand",
+        tracking=True)
