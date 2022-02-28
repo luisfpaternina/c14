@@ -17,3 +17,10 @@ class SaleSuscriptionDemand(models.Model):
     date = fields.Date(
         string="Date",
         tracking=True)
+    partner_id = fields.Many2one(
+        'res.partner',
+        string="Partner",
+        tracking=True)
+    street = fields.Char(
+        related="partner_id.street",
+        string="Address")
