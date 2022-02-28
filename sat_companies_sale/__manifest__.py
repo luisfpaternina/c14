@@ -47,9 +47,9 @@
         'data/sale_order_sent_email_data.xml',
         'data/sale_order_maintenance_offer.xml',
         'data/crm_lead_opportunity_notify.xml',
-        'data/base_automatization.xml',
         'data/mail_contract.xml',
         'data/send_email_max_days.xml',
+        'data/base_automatization.xml',
         
     ],
     'installable': True
