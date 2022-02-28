@@ -66,6 +66,12 @@
                                     <group>
                                         
                                     </group>
+                                    <group>
+                                        <field name="subscription_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
                                 </group>
                             </page>
                             <page string="General dates 2">
