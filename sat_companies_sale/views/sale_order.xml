@@ -6,10 +6,6 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
 
-            <header>
-                <button name="action_send_email" string="Send by email contract suspension" type="object"/>
-            </header>
-
             <xpath expr="//form/header/button[8]" position="attributes">
                 <attribute name="name">get_task_sale_type</attribute>
             </xpath>
