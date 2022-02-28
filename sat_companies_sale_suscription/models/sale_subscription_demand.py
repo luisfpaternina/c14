@@ -62,3 +62,18 @@ class SaleSuscriptionDemand(models.Model):
         'subscription.inspection.report',
         string="Inspection report",
         tracking=True)
+    is_claim = fields.Boolean(
+        string="Claim",
+        tracking=True)
+    claim_date = fields.Date(
+        string="Claim date",
+        tracking=True)
+    reception_date = fields.Date(
+        string="Reception date",
+        tracking=True)
+    delivery_name = fields.Char(
+        string="Delivery name",
+        tracking=True)
+    telephone = fields.Char(
+        string="Telephone",
+        tracking=True)
