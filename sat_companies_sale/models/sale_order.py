@@ -195,7 +195,8 @@ class SaleOrder(models.Model):
         self.ensure_one()
         ir_model_data = self.env['ir.model.data']
         try:
-            template_id = self.env.ref('sat_companies_sale.email_template_contract_suspension')
+            template_id = \
+            ir_model_data.get_object_reference('test_email', 'email_template_contract_suspension')[1]
         except ValueError:
             template_id = False
         try:
