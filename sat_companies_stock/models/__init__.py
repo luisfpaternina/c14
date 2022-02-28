@@ -26,3 +26,4 @@ from . import stock_gsm_model
 from . import stock_landing_key
 from . import stock_gadgets_planning_type
 from . import stock_state_record
+from . import stock_location
