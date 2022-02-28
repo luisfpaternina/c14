@@ -53,7 +53,11 @@ class CrmLead(models.Model):
         string="Validate days")
 
 
-    @api.onchange('stage_id','oportunity_type_id')
+    @api.onchange(
+        'stage_id',
+        'oportunity_type_id',
+        'quote_date_sent_min',
+        'name')
     def _validate_days(self):
         if self.opportunity_days > self.stage_days:
             self.is_validate_days = True
