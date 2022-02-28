@@ -14,3 +14,6 @@ class SuscriptionDemandAmount(models.Model):
     date = fields.Date(
         string="Date",
         tracking=True)
+    demand_id = fields.Many2one(
+        'sale.subscription.demand',
+        string="Demand")
