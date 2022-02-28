@@ -17,4 +17,9 @@ class CrmLeadType(models.Model):
     days_maximum_stage = fields.Integer(
         string="Days maximum stage",
         tracking=True)
+
+
+    @api.onchange('name')
+    def _upper_name(self):        
+        self.name = self.name.upper() if self.name else False
     
