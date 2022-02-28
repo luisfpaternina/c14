@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 17:21+0000\n"
-"PO-Revision-Date: 2022-02-28 17:21+0000\n"
+"POT-Creation-Date: 2022-02-28 17:44+0000\n"
+"PO-Revision-Date: 2022-02-28 17:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -322,12 +322,12 @@ msgstr ""
 #. module: sat_companies_sale_suscription
 #: model:res.groups,name:sat_companies_sale_suscription.demands_manager_group
 msgid "Manager demands"
-msgstr ""
+msgstr "Administrador ficha demanda"
 
 #. module: sat_companies_sale_suscription
 #: model:res.groups,comment:sat_companies_sale_suscription.demands_manager_group
 msgid "Manager demands Permission Group"
-msgstr ""
+msgstr "Administrador ficha demanda"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__mar
@@ -426,9 +426,14 @@ msgid "Phone"
 msgstr "Télefono"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__city
+msgid "Population"
+msgstr "Población"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__project_task_id
 msgid "Project Task"
-msgstr ""
+msgstr "Tarea"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_order_template
@@ -486,6 +491,11 @@ msgstr "Firmado el"
 #, python-format
 msgid "Solo se puede tener una cuenta bancaría por defecto!"
 msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__state_id
+msgid "State"
+msgstr "Provincia"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription
