@@ -40,6 +40,24 @@
                                
                             </group>
                         </group>
+                        <notebook colspan="4">
+                            <page string="General dates">
+                                <group>
+                                    <group>
+                                        <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="General dates 2">
+                                
+                            </page>
+                            <page string="Observations">
+                                
+                            </page>
+                            <page string="Notes">
+                                
+                            </page>
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
