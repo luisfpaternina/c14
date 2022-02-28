@@ -283,7 +283,7 @@
 
         <report
                 id="report_template_purchase_order_sat"
-                string="Orden de compra Serki"
+                string="Orden de compra personalizada"
                 model="purchase.order"
                 report_type="qweb-pdf"
                 name="sat_companies_purchase.report_template_purchase_order"
