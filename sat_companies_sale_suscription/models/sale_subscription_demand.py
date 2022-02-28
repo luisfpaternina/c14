@@ -58,3 +58,7 @@ class SaleSuscriptionDemand(models.Model):
         'subscription.reason.change',
         string="Reason change",
         tracking=True)
+    inspection_report_id = fields.Many2one(
+        'subscription.inspection.report',
+        string="Inspection report",
+        tracking=True)
