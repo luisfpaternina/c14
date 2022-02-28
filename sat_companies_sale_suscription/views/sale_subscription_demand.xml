@@ -61,7 +61,7 @@
                             </page>
                             <page string="Observations">
                                 <group>
-                                    <field name="Observations" placeholder="Observations"/>
+                                    <field name="observations" placeholder="Observations"/>
                                 </group>
                             </page>
                             <page string="Notes">
