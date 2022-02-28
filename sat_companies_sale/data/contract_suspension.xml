@@ -11,9 +11,10 @@
            <field name="auto_delete" eval="True"/>
            <field name="lang">${object.partner_id.lang}</field>
            <field name="body_html"><![CDATA[
-                <p>Hi</p>
+                <p>COMUNIDAD DE PROPIETARIOS</p>
                 <br/>
-                <p>Here is the details</p>
+                <p>En Elche a de de 2022</p>
+                <p>Por una parte,</p>
                 <br/>
                  ]]>
            </field>
