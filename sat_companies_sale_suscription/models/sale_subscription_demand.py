@@ -77,3 +77,6 @@ class SaleSuscriptionDemand(models.Model):
     telephone = fields.Char(
         string="Telephone",
         tracking=True)
+    is_compensation = fields.Boolean(
+        string="Compensation",
+        tracking=True)
