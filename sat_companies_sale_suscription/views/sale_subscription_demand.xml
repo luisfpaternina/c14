@@ -53,6 +53,12 @@
                                     </group>
                                     <group>
                                         <field name="is_embargo"/>
+                                        <field name="demand_line_ids">
+                                            <tree editable="botttom">
+                                                <field name="amount"/>
+                                                <field name="date"/>
+                                            </tree>
+                                        </field>
                                     </group>
                                 </group>
                             </page>
