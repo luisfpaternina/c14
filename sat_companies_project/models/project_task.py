@@ -102,6 +102,10 @@ class ProjectTaskInherit(models.Model):
     payment_term_ot_id = fields.Many2one(
         'account.payment.term',
         string="Payment term")
+    picking_ids = fields.Many2many(
+        'stock.picking',
+        'stock_picking_rel',
+        string="Picking")
 
 
     @api.onchange('partner_id','ot_type_id')
