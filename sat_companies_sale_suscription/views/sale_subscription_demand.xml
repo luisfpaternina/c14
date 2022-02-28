@@ -52,6 +52,9 @@
                                         <field name="email"/>
                                     </group>
                                     <group>
+                                        
+                                    </group>
+                                    <group>
                                         <field name="is_embargo"/>
                                         <field name="demand_line_ids">
                                             <tree editable="botttom">
@@ -59,6 +62,9 @@
                                                 <field name="date"/>
                                             </tree>
                                         </field>
+                                    </group>
+                                    <group>
+                                        
                                     </group>
                                 </group>
                             </page>
