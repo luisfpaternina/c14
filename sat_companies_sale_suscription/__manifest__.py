@@ -33,6 +33,7 @@
         'views/sale_subscription.xml',
         'views/sale_order_view.xml',
         'views/res_partner.xml',
+        'views/sale_subscription_demand.xml',
         
     ],
     'installable': True
