@@ -32,8 +32,8 @@
         <field name="activity_user_id" ref="base.user_admin"/>
         <field name="activity_summary"></field>
         <field name="activity_date_deadline_range">30</field>
-        <field name="filter_pre_domain"></field>
-        <field name="filter_domain"></field>
+        <field name="filter_pre_domain">[["recurring_rule_boundary","=","limited"]]</field>
+        <field name="filter_domain">[["recurring_rule_boundary","=","limited"]]</field>
     </record>
 
 </odoo>
