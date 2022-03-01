@@ -58,6 +58,9 @@ class SaleSuscriptionInherit(models.Model):
     is_extension_stage = fields.Boolean(
         string="Is extension stage",
         compute="_compute_extension_stage")
+    recurring_rule_boundary = fields.Selection(
+        string="Duration",
+        related="template_id.recurring_rule_boundary")
 
 
     @api.depends('stage_id')
