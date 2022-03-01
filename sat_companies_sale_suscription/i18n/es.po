@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-01 12:33+0000\n"
-"PO-Revision-Date: 2022-03-01 12:33+0000\n"
+"POT-Creation-Date: 2022-03-01 12:46+0000\n"
+"PO-Revision-Date: 2022-03-01 12:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -140,6 +140,7 @@ msgstr "Juzgado N°"
 #. module: sat_companies_sale_suscription
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_demands
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_inspection_report
+#: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_process
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_reason_change
 msgid "Create new record"
 msgstr "Crear nuevo registro"
@@ -523,6 +524,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__name
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_subscription_inspection_report_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_subscription_process_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_subscription_reason_change_form
 msgid "Name"
 msgstr "Nombre"
@@ -627,8 +629,10 @@ msgid "Population"
 msgstr "Población"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.actions.act_window,name:sat_companies_sale_suscription.action_view_process
 #: model:ir.model,name:sat_companies_sale_suscription.model_subscription_process
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__process_id
+#: model:ir.ui.menu,name:sat_companies_sale_suscription.menu_subscription_process
 msgid "Process"
 msgstr "Procedimiento"
 
