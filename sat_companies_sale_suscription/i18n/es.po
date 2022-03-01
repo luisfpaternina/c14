@@ -6,14 +6,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-01 12:46+0000\n"
-"PO-Revision-Date: 2022-03-01 12:46+0000\n"
+"POT-Creation-Date: 2022-03-01 15:30+0000\n"
+"PO-Revision-Date: 2022-03-01 15:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.template_email_contract_suspension_repot
+msgid ""
+"\n"
+"                <center><strong>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>\n"
+"                <br/>\n"
+"                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
+"                <p>Por una parte, D. Serafín Quiles Coves, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>\n"
+"                <br/>\n"
+"                <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>\n"
+"                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando la presente SUSPENSION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR, que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>\n"
+"                <strong><p>ACUERDAN:</p></strong>\n"
+"                <p>Primero.-Que la COMUNIDAD DE PROPIETARIOS y ${object.company_id.name} suscribieron con fecha _________ contrato de mantenimiento del ascensor Rae nº ${object.product_id.rae} sito en __________________________________ con una duración inicial de _________años.</p>\n"
+"                <p>Segundo.-Que mediante el presente escrito ambas partes acuerdan proceder con fecha de hoy y de mutuo acuerdo a su SUSPENSION  por periodo _____________________ , periodo en el que no se realizará mantenimiento ni reparación alguna al ascensor y en consecuencia  el cliente no deberá abonar el precio pactado,  quedando por tanto en suspenso el contrato y por ende todas las clausulas y acuerdos que constan en el mismo así como en los anexos que se hayan podido firmar vinculados a la prestación del servicio, por lo que ${object.company_id.name} no es responsable de lo que pueda suceder al ascensor en dicho periodo de suspensión.</p>\n"
+"                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>\n"
+"                <p></p>\n"
+"                 \n"
+"            "
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
@@ -111,6 +131,11 @@ msgstr "Reclamación"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__claim_date
 msgid "Claim date"
 msgstr "Fecha"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model,name:sat_companies_sale_suscription.model_res_company
+msgid "Companies"
+msgstr "Compañías"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_compensation
@@ -241,6 +266,7 @@ msgid "Descuento de mes gratis"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_company__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner_bank__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order__display_name
@@ -335,6 +361,7 @@ msgid "General dates 2"
 msgstr "Datos generales 2"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_company__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner_bank__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order__id
@@ -437,6 +464,7 @@ msgid "June"
 msgstr "Junio"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_company____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner_bank____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order____last_update
@@ -547,6 +575,11 @@ msgid "Notes"
 msgstr "Notas"
 
 #. module: sat_companies_sale_suscription
+#: model:mail.template,subject:sat_companies_sale_suscription.template_email_contract_suspension_repot
+msgid "Notificación suspensión de contrato"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__nov
 msgid "November"
 msgstr "Noviembre"
@@ -617,6 +650,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "Partner"
 msgstr "Contacto"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_company__partner_manager_id
+msgid "Partner manager"
+msgstr "Gerente"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__phone
@@ -740,6 +778,12 @@ msgstr "Plantilla de suscripción"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__gadgets_contract_type_id
 msgid "Subscription type"
 msgstr "Tipo de suscripción"
+
+#. module: sat_companies_sale_suscription
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_sale_order_offer
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_sale_order_offer_ir_actions_server
+msgid "Suspensión de contrato"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__task_user_id
