@@ -26,7 +26,7 @@
                         <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
                         <field name="gadgest_contract_type_id" invisible="1"/>
                         <field name="pdf_file_sale_contract"/>
-
+                        <field name="is_extension"/>
                     </group>
 
                 </group>
