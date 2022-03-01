@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_email_contract_extension" model="mail.template">
+            <field name="name">Ampliación de contrato</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">Notificación ampliación de contrato</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <center><strong>ANEXO AMPLIACION DURACION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>
+                <br/>
+                <p>COMUNIDAD DE PROPIETARIOS</p>
+                <p>Por una parte, D.${object.company_id.partner_manager_id.name}, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>
+                <br/>
+                <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>
+                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando el presente <strong>ANEXO DE AMPLIACION DE LA DURACION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR,</strong> que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>
+                <strong><p>ACUERDAN:</p></strong>
+                <p><strong>Primero.-</strong> Que la COMUNIDAD DE PROPIETARIOS tiene que pagar la cantidad de________ en virtud de del procedimiento judicial que se ha tramitado en Juzgado de 1ª Instancia Nº … de …..,  autos …….., cuya sentencia o fallo se ha dictado con fecha ……………..</p>
+                <p><strong>Segundo.-</strong>Que mediante el presente acuerdo ambas partes amplían el contrato de mantenimiento de ascensor que tenían suscrito con fecha ________________por periodo de……….años , renovable por iguales periodos,  por lo que , con esta prórroga el  contrato   vence   el .…  de ……..  de  ……….manteniéndose vigentes el resto de sus cláusulas.</p>
+                <p><strong>Tercero.-</strong>Que la Mercantil ${object.company_id.name}  en este acto presta a la comunidad la cantidad de _____ euros para el pago de la cuantía que consta en el acuerdo primero.</p>
+                <p><strong>Cuarto -</strong> Para el caso de que la COMUNIDAD DE PROPIETARIOS resuelva anticipadamente el contrato de mantenimiento antes del transcurso de la duración pactada, ésta deberá reintegrar a la Mercantil  ${object.company_id.name} la cantidad prestada en el hecho tercero</p>
+                <p><strong>Quinto -</strong> Que ambas partes se someten, del modo más expreso, a los Tribunales de Justicia de Elche para cualquier divergencia, con renuncia a otro fuero que les pudiera corresponder.</p>
+                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>
+                <br/><br/>
+                <p>${object.company_id.name}</p>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
