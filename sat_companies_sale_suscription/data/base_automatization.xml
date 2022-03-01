@@ -5,7 +5,7 @@
         <field name="name">Suspensión de contrato</field>
         <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
         <field name="state">email</field>
-        <field name="trigger">on_create_or_write</field>
+        <field name="trigger">on_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_suspension_rp"/>
         <field name="filter_domain">[["stage_id.name","ilike","Cerrado"]]</field>
