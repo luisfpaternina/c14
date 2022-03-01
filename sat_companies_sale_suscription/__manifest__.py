@@ -29,6 +29,7 @@
         'data/stock.gadgets.contract.type.csv',
         'data/subscription.reason.change.csv',
         'data/subscription.inspection.report.csv',
+        'data/subscription.process.csv',
         'data/product_template_data.xml',
         'views/sale_suscription_template_view.xml',
         'views/sale_order_template.xml',

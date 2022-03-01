@@ -99,3 +99,7 @@ class SaleSuscriptionDemand(models.Model):
     court_number = fields.Char(
         string="Court number",
         tracking=True)
+    process_id = fields.Many2one(
+        'subscription.process',
+        string="Process",
+        tracking=True)
