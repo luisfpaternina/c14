@@ -55,6 +55,8 @@ class SaleSuscriptionInherit(models.Model):
     is_extension = fields.Boolean(
         string="Is extension",
         tracking=True)
+    is_extension_stage = fields.Boolean(
+        string="Is extension stage")
 
 
     @api.onchange('product_id')
