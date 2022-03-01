@@ -39,6 +39,7 @@
         'views/sale_subscription_demand.xml',
         'views/subscription_reason_change.xml',
         'views/subscription_inspection_report.xml',
+        'views/subscription_process.xml',
         
     ],
     'installable': True
