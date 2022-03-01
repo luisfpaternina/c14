@@ -51,7 +51,8 @@ class SaleSuscriptionInherit(models.Model):
         copy=False)
     pdf_file_sale_contract = fields.Binary(
         'PDF Contrato',
-        tracking=True)
+        tracking=True,
+        attachment=True)
     is_extension = fields.Boolean(
         string="Is extension",
         tracking=True)
