@@ -18,7 +18,7 @@
         <field name="trigger">on_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_extension"/>
-        <field name="filter_pre_domain">[["is_extension","=",True]]</field>
+        <field name="filter_pre_domain">[["stage_id","ilike","En progreso"]]</field>
         <field name="filter_domain">[["is_extension","=",True]]</field>
     </record>
 
