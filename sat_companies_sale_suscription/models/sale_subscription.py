@@ -52,6 +52,9 @@ class SaleSuscriptionInherit(models.Model):
     pdf_file_sale_contract = fields.Binary(
         'PDF Contrato',
         tracking=True)
+    is_extension = fields.Boolean(
+        string="Is extension",
+        tracking=True)
 
 
     @api.onchange('product_id')
