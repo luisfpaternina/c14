@@ -63,7 +63,7 @@ class SaleSuscriptionInherit(models.Model):
         related="template_id.recurring_rule_boundary")
     document_ids = fields.Many2many(
         'ir.attachment',
-        string="Shipping Documents",
+        string="SUBA SU ARCHIVO",
         help='Please attach Documents',
         copy=False)
 
