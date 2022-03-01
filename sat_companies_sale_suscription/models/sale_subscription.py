@@ -63,7 +63,7 @@ class SaleSuscriptionInherit(models.Model):
     @api.depends('stage_id')
     def _compute_extension_stage(self):
         for record in self:
-            if record.stage_id = self.env.ref('sale_subscription.sale_subscription_stage_in_progress').id:
+            if record.stage_id == self.env.ref('sale_subscription.sale_subscription_stage_in_progress').id:
                 record.is_extension_stage = True
             else:
                 record.is_extension_stage = False
