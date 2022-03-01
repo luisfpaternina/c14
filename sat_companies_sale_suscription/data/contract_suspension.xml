@@ -13,7 +13,7 @@
                 <center><strong>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>
                 <br/>
                 <p>COMUNIDAD DE PROPIETARIOS</p>
-                <p>Por una parte, D. Serafín Quiles Coves, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>
+                <p>Por una parte, D.${object.company_id.partner_manager_id.name}, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>
                 <br/>
                 <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>
                 <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando la presente SUSPENSION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR, que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>
