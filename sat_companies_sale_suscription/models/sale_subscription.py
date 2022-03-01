@@ -65,7 +65,8 @@ class SaleSuscriptionInherit(models.Model):
         'ir.attachment',
         string="SUBA SU ARCHIVO",
         help='Please attach Documents',
-        copy=False)
+        copy=False,
+        tracking=True)
 
 
     @api.depends('stage_id')
