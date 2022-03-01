@@ -61,6 +61,11 @@ class SaleSuscriptionInherit(models.Model):
     recurring_rule_boundary = fields.Selection(
         string="Duration",
         related="template_id.recurring_rule_boundary")
+    document_ids = fields.Many2many(
+        'ir.attachment',
+        string="Shipping Documents",
+        help='Please attach Documents',
+        copy=False)
 
 
     @api.depends('stage_id')
