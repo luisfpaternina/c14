@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="automatization_sat_companies_sale_order_offer" model="base.automation">
+    <record id="automatization_sat_companies_suspension" model="base.automation">
         <field name="name">Suspensión de contrato</field>
         <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
         <field name="state">email</field>
@@ -9,6 +9,16 @@
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_suspension_repot"/>
         <field name="filter_domain">[["stage_id.name","ilike","Cerrado"]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_extension" model="base.automation">
+        <field name="name">Ampliación de contrato</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_extension"/>
+        <field name="filter_domain">[["is_extension","=",True]]</field>
     </record>
 
 </odoo>
