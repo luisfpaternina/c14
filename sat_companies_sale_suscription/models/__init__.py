@@ -10,3 +10,4 @@ from . import sale_subscription_demand
 from . import subscription_demand_amount
 from . import subscription_reason_change
 from . import subscription_inspection_report
+from . import subscription_process

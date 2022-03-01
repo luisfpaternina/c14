@@ -2,10 +2,10 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
-class SuscriptionInspectionReport(models.Model):
-    _name = 'subscription.inspection.report'
+class SuscriptionProcess(models.Model):
+    _name = 'subscription.process'
     _inherit = 'mail.thread'
-    _description = 'Inspection report'
+    _description = 'Process'
 
     name = fields.Char(
         string="Name")
