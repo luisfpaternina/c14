@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 20:22+0000\n"
-"PO-Revision-Date: 2022-02-28 20:22+0000\n"
+"POT-Creation-Date: 2022-03-01 11:22+0000\n"
+"PO-Revision-Date: 2022-03-01 11:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -130,6 +130,11 @@ msgid "Contract type"
 msgstr "Tipo de suscripción"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__court_number
+msgid "Court number"
+msgstr "Juzgado N°"
+
+#. module: sat_companies_sale_suscription
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_demands
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_inspection_report
 #: model_terms:ir.actions.act_window,help:sat_companies_sale_suscription.action_view_reason_change
@@ -213,6 +218,11 @@ msgid "Demand number"
 msgstr "N° demanda"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__partner_demand_id
+msgid "Demand partner"
+msgstr "Demandante"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.actions.act_window,name:sat_companies_sale_suscription.action_view_demands
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription_demand
 #: model:ir.ui.menu,name:sat_companies_sale_suscription.menu_subscription_demand
@@ -265,7 +275,7 @@ msgstr "Febrero"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_channel_ids
@@ -439,7 +449,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Últimaactualización"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_main_attachment_id
