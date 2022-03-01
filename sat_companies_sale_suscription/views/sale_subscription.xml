@@ -27,6 +27,7 @@
                         <field name="gadgest_contract_type_id" invisible="1"/>
                         <field name="pdf_file_sale_contract"/>
                         <field name="is_extension"/>
+                        <field name="is_extension_stage"/>
                     </group>
 
                 </group>

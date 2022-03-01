@@ -56,7 +56,17 @@ class SaleSuscriptionInherit(models.Model):
         string="Is extension",
         tracking=True)
     is_extension_stage = fields.Boolean(
-        string="Is extension stage")
+        string="Is extension stage",
+        compute="_compute_extension_stage")
+
+
+    @api.depends('stage_id')
+    def _compute_extension_stage(self):
+        for record in self:
+            if record.stage_id = self.env.ref('sale_subscription.sale_subscription_stage_in_progress').id:
+                record.is_extension_stage = True
+            else:
+                record.is_extension_stage = False
 
 
     @api.onchange('product_id')
