@@ -31,6 +31,7 @@
         'data/subscription.inspection.report.csv',
         'data/subscription.process.csv',
         'data/product_template_data.xml',
+        'data/contract_suspension.xml',
         'views/sale_suscription_template_view.xml',
         'views/sale_order_template.xml',
         'views/sale_subscription.xml',
