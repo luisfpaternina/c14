@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-01 11:22+0000\n"
-"PO-Revision-Date: 2022-03-01 11:22+0000\n"
+"POT-Creation-Date: 2022-03-01 12:33+0000\n"
+"PO-Revision-Date: 2022-03-01 12:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,12 +29,14 @@ msgstr "Número de cuenta"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_needaction
 msgid "Action Needed"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__active
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__active
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__active
 msgid "Active"
 msgstr "Activo"
@@ -79,6 +81,7 @@ msgstr "Abril"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
@@ -145,6 +148,7 @@ msgstr "Crear nuevo registro"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__create_uid
 msgid "Created by"
 msgstr "Creado por"
@@ -153,6 +157,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__create_date
 msgid "Created on"
 msgstr "Creado en"
@@ -245,6 +250,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -273,6 +279,7 @@ msgstr "Febrero"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_follower_ids
 msgid "Followers"
 msgstr "Seguidores"
@@ -281,6 +288,7 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_channel_ids
 msgid "Followers (Channels)"
 msgstr ""
@@ -289,6 +297,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
@@ -335,6 +344,7 @@ msgstr "Datos generales 2"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__id
 msgid "ID"
 msgstr ""
@@ -346,6 +356,8 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_needaction
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_unread
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_unread
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_needaction
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_unread
 msgid "If checked, new messages require your attention."
@@ -358,6 +370,8 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_error
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_has_error
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
@@ -385,6 +399,7 @@ msgstr "Acta inspección"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_is_follower
 msgid "Is Follower"
 msgstr ""
@@ -431,6 +446,7 @@ msgstr "Junio"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
@@ -439,6 +455,7 @@ msgstr "Última modificación el"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -447,6 +464,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__write_date
 msgid "Last Updated on"
 msgstr "Últimaactualización"
@@ -455,6 +473,7 @@ msgstr "Últimaactualización"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
@@ -483,6 +502,7 @@ msgstr "Mayo"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_has_error
 msgid "Message Delivery error"
 msgstr ""
@@ -491,6 +511,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_ids
 msgid "Messages"
 msgstr ""
@@ -499,6 +520,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__name
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_subscription_inspection_report_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_subscription_reason_change_form
@@ -531,6 +553,7 @@ msgstr "Noviembre"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
@@ -539,6 +562,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
@@ -547,6 +571,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
@@ -555,6 +580,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
@@ -563,6 +589,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
@@ -600,6 +627,12 @@ msgid "Population"
 msgstr "Población"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model,name:sat_companies_sale_suscription.model_subscription_process
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__process_id
+msgid "Process"
+msgstr "Procedimiento"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__project_task_id
 msgid "Project Task"
 msgstr "Tarea"
@@ -626,6 +659,7 @@ msgstr "Fec.Recepción"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
@@ -733,6 +767,7 @@ msgstr "tipo de contrato"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_unread
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_unread
 msgid "Unread Messages"
 msgstr ""
@@ -741,6 +776,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
@@ -755,6 +791,7 @@ msgstr "Validar si el contacto es potencial!"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__website_message_ids
 msgid "Website Messages"
 msgstr ""
@@ -763,6 +800,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription_demand__website_message_ids
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_demand_amount__website_message_ids
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_inspection_report__website_message_ids
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_process__website_message_ids
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_subscription_reason_change__website_message_ids
 msgid "Website communication history"
 msgstr ""
