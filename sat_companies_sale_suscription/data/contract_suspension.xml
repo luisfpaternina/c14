@@ -10,7 +10,7 @@
             <field name="lang">${user.lang}</field>
             <field name="auto_delete" eval="False"/>
             <field name="body_html"><![CDATA[
-                <center><p>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</p></center>
+                <center><strong>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>
                 <br/>
                 <p>COMUNIDAD DE PROPIETARIOS</p>
                 <p>Por una parte, D. Serafín Quiles Coves, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  SERKI INSTALACIONES Y SERVICIOS SL (en adelante SERKI) con domicilio en Elche av. de l’altet nº 29 y con CIF nº B-84241454,</p>
