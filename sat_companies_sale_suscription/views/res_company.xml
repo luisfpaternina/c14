@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[@name='phone']" position="before">
-                <field name="partner_manager_id"/>
+                <field name="partner_manager_id" options="{'no_create': True, 'no_create_edit':True}"/>
             </xpath>
 
         </field>
