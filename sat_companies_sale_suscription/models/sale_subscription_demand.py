@@ -92,3 +92,10 @@ class SaleSuscriptionDemand(models.Model):
     is_demand = fields.Boolean(
         string="Is demand",
         tracking=True)
+    partner_demand_id = fields.Many2one(
+        'res.partner',
+        string="Demand partner",
+        tracking=True)
+    court_number = fields.Char(
+        string="Court number",
+        tracking=True)
