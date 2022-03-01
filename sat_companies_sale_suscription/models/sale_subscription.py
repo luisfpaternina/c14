@@ -50,7 +50,8 @@ class SaleSuscriptionInherit(models.Model):
         help='Date of the signature.',
         copy=False)
     pdf_file_sale_contract = fields.Binary(
-        'PDF Contrato')
+        'PDF Contrato',
+        tracking=True)
 
 
     @api.onchange('product_id')
