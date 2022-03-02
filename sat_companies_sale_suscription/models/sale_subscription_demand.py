@@ -120,3 +120,7 @@ class SaleSuscriptionDemand(models.Model):
         'res.partner',
         string="Lawyer",
         tracking=True)
+    partner_attorney_id = fields.Many2one(
+        'res.partner',
+        string="Attorney",
+        tracking=True)
