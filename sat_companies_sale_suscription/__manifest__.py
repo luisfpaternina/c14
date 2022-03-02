@@ -32,6 +32,7 @@
         'data/subscription.process.csv',
         'data/product_template_data.xml',
         'data/contract_suspension.xml',
+        'data/contract_extension.xml',
         'data/base_automatization.xml',
         'views/sale_suscription_template_view.xml',
         'views/sale_order_template.xml',

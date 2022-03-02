@@ -51,7 +51,31 @@ class SaleSuscriptionInherit(models.Model):
         copy=False)
     pdf_file_sale_contract = fields.Binary(
         'PDF Contrato',
+        attachment=True)
+    is_extension = fields.Boolean(
+        string="Is extension",
         tracking=True)
+    is_extension_stage = fields.Boolean(
+        string="Is extension stage",
+        compute="_compute_extension_stage")
+    recurring_rule_boundary = fields.Selection(
+        string="Duration",
+        related="template_id.recurring_rule_boundary")
+    document_ids = fields.Many2many(
+        'ir.attachment',
+        string="SUBA SU ARCHIVO",
+        help='Please attach Documents',
+        copy=False,
+        tracking=True)
+
+
+    @api.depends('stage_id')
+    def _compute_extension_stage(self):
+        for record in self:
+            if record.stage_id.id == 2:
+                record.is_extension_stage = True
+            else:
+                record.is_extension_stage = False
 
 
     @api.onchange('product_id')
