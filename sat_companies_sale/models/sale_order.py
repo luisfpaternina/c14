@@ -65,12 +65,12 @@ class SaleOrder(models.Model):
         string="R.A.E",
         related="product_id.rae")
     contract_send = fields.Boolean()
-    pdf_description = fields.Text(
+    pdf_description = fields.Char(
         string="PDF description",
         tracking=True)
 
 
-    @api.onchange('pdf_file_sale_contract','name')
+    @api.onchange('state','name')
     def send_pdf_description(self):
         for record in self:
             if record.pdf_file_sale_contract:
