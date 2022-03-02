@@ -53,6 +53,7 @@ class AccountMove(models.Model):
             else:
                 self.subscription_id = False
 
+
     @api.depends('subscription_id')
     def _compute_gadget_name(self):
         for record in self:
