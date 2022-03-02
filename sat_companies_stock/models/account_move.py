@@ -8,6 +8,10 @@ import logging
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
+    subscription_id = fields.Many2one(
+        'sale.subscription',
+        string="Subscription",
+        compute="_compute_subscription")
     product_id = fields.Many2one(
         'product.template',
         'Gadgets')
@@ -39,10 +43,6 @@ class AccountMove(models.Model):
         'sale.subscription.template',
         string="Subscription template",
         related="product_id.subscription_template_id")
-    subscription_id = fields.Many2one(
-        'sale.subscription',
-        string="Subscription",
-        compute="_compute_subscription")
 
 
     @api.depends('partner_id')
