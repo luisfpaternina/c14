@@ -10,13 +10,11 @@ class AccountMove(models.Model):
 
     product_id = fields.Many2one(
         'product.template',
-        'Gadgets',
-        compute="_compute_gadget_name")
+        'Gadgets')
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type')
     task_user_id = fields.Many2one(
-        'res.users',
-        compute="_compute_gadget_name")
+        'res.users')
     sale_type_id = fields.Many2one(
         'sale.order.type')
     date_begin = fields.Datetime(
