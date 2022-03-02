@@ -65,6 +65,18 @@ class SaleOrder(models.Model):
         string="R.A.E",
         related="product_id.rae")
     contract_send = fields.Boolean()
+    send_pdf_description = fields.Text(
+        string="PDF description",
+        tracking=True)
+
+
+    @api.onchange('pdf_file_sale_contract')
+    def send_pdf_description(self):
+        for record in self:
+            if record.pdf_file_sale_contract:
+                record.send_pdf_description = 'CONTRATO HA SIDO FIRMADO'
+            else:
+                record.send_pdf_description = False
 
 
     @api.onchange('product_id')
