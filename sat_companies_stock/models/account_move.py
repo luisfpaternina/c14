@@ -14,7 +14,8 @@ class AccountMove(models.Model):
         compute="_compute_subscription")
     product_id = fields.Many2one(
         'product.template',
-        'Gadgets')
+        'Gadgets',
+        related="subscription_id.product_id")
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type')
     task_user_id = fields.Many2one(
