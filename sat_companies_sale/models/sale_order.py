@@ -72,10 +72,10 @@ class SaleOrder(models.Model):
         string="PDF True")
 
 
-    @api.onchange('state','name','pdf_file_sale_contract')
+    @api.onchange('state','name')
     def send_pdf_description(self):
         for record in self:
-            if record.pdf_file_sale_contract:
+            if record.state == 'sent':
                 record.is_pdf_true = True
 
 
