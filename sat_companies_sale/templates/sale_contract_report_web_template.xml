@@ -113,6 +113,13 @@
                                         <p>Cotización Número <span t-esc="name"/></p>
                                     </div>
                                     <div>
+                                        <t t-foreach="sale_object.type_service_id" t-as="s">
+                                            <ul>
+                                                <li><span t-esc="s.type_service_id.name"/></li>
+                                            </ul>                    
+                                        </t>
+                                    </div>
+                                    <div>
                                         <img id="signature_pad_image_document" src=""/>
                                     </div>
                                 </t>

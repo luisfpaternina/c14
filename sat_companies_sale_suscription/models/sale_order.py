@@ -54,36 +54,37 @@ class SaleOrderTemplateInherit(models.Model):
             #to_create.append(order.product_id.subscription_template_id)
             #to_create.append(order.order_line)
             # create a subscription for each template with all the necessary lines
-            for template in to_create:
-                values = order._prepare_subscription_data(template)
-                values.update({
-                    'product_id': order.product_id.id,
-                    'sale_type_id': order.sale_type_id.id,
-                    'task_user_id': order.task_user_id.id,
-                    'gadgest_contract_type_id': order.gadgets_contract_type_id.id,
-                    'date_begin': order.date_begin,
-                    'date_end': order.date_end
-                })
-                values['recurring_invoice_line_ids'] = to_create[template]._prepare_subscription_line_data()
-                subscription = self.env['sale.subscription'].sudo().create(values)
-                subscription.onchange_date_start()
-                res.append(subscription.id)
-                to_create[template].write({'subscription_id': subscription.id})
-                subscription.message_post_with_view(
-                    'mail.message_origin_link', values={'self': subscription, 'origin': order},
-                    subtype_id=self.env.ref('mail.mt_note').id, author_id=self.env.user.partner_id.id
-                )
-                project_task = self.env['project.task'].search([('sale_order_id.id','=',order.id)])
-                self.env['sale.subscription.log'].sudo().create({
-                    'subscription_id': subscription.id,
-                    'event_date': fields.Date.context_today(self),
-                    'event_type': '0_creation',
-                    'amount_signed': subscription.recurring_monthly,
-                    'recurring_monthly': subscription.recurring_monthly,
-                    'currency_id': subscription.currency_id.id,
-                    'category': subscription.stage_category,
-                    'user_id': order.user_id.id,
-                    'team_id': order.team_id.id,
-                    'project_task_id': project_task.id or False
-                })
+            if order.order_line:
+                for template in to_create:
+                    values = order._prepare_subscription_data(template)
+                    values.update({
+                        'product_id': order.product_id.id,
+                        'sale_type_id': order.sale_type_id.id,
+                        'task_user_id': order.task_user_id.id,
+                        'gadgest_contract_type_id': order.gadgets_contract_type_id.id,
+                        'date_begin': order.date_begin,
+                        'date_end': order.date_end
+                    })
+                    values['recurring_invoice_line_ids'] = to_create[template]._prepare_subscription_line_data()
+                    subscription = self.env['sale.subscription'].sudo().create(values)
+                    subscription.onchange_date_start()
+                    res.append(subscription.id)
+                    to_create[template].write({'subscription_id': subscription.id})
+                    subscription.message_post_with_view(
+                        'mail.message_origin_link', values={'self': subscription, 'origin': order},
+                        subtype_id=self.env.ref('mail.mt_note').id, author_id=self.env.user.partner_id.id
+                    )
+                    project_task = self.env['project.task'].search([('sale_order_id.id','=',order.id)])
+                    self.env['sale.subscription.log'].sudo().create({
+                        'subscription_id': subscription.id,
+                        'event_date': fields.Date.context_today(self),
+                        'event_type': '0_creation',
+                        'amount_signed': subscription.recurring_monthly,
+                        'recurring_monthly': subscription.recurring_monthly,
+                        'currency_id': subscription.currency_id.id,
+                        'category': subscription.stage_category,
+                        'user_id': order.user_id.id,
+                        'team_id': order.team_id.id,
+                        'project_task_id': project_task.id or False
+                    })
         return res

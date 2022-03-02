@@ -75,8 +75,8 @@ class SaleOrder(models.Model):
     @api.onchange('state','name')
     def send_pdf_description(self):
         for record in self:
-            if record.state == 'sent':
-                record.is_pdf_true = True
+            if record.pdf_file_sale_contract:
+                record.pdf_description = 'CONTRATO HA SIDO FIRMADO'
 
 
     @api.onchange('product_id')

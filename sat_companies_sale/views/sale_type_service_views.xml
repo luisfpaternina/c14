@@ -12,7 +12,7 @@
                 </tree>
             </field>
         </record>
-        <record id="view_crm_lead_type_form" model="ir.ui.view">
+        <record id="sale_type_service_form" model="ir.ui.view">
             <field name="name">sale.type.service.form</field>
             <field name="model">sale.type.service</field>
             <field name="priority" eval="8" />
@@ -55,7 +55,7 @@
 
         <menuitem
             id="menu_sale_type_service" 
-            name="Type Service" 
+            name="Información Contrato" 
             parent="sale.menu_sale_config"
             action="sat_companies_sale.sale_type_servic_action"
             sequence="50"/>
