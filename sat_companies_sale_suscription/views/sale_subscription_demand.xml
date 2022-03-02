@@ -109,6 +109,12 @@
                                         
                                     </group>
                                     <group>
+                                        <field name="is_powers"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
+                                    <group>
                                         <field name="partner_president_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                     </group>
                                     <group>
