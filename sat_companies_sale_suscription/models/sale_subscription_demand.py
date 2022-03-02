@@ -113,3 +113,6 @@ class SaleSuscriptionDemand(models.Model):
     president_phone = fields.Char(
         string="President phone",
         related="partner_president_id.phone")
+    trial_citation = fields.Datetime(
+        string="Trial citation",
+        tracking=True)
