@@ -46,7 +46,7 @@
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
-                <page string="Contract" name="type_service_contract" invisible="1">
+                <page string="Tipos de Servicios en Contrato" name="type_service_contract">
                     <group>
                         <field name="type_service_id">
                             <tree string="Check type Contract Service" editable="bottom">

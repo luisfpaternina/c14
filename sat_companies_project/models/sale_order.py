@@ -51,7 +51,8 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self).action_confirm()
         if self.is_potential_client:
             raise ValidationError(_("Verify the type of client if it is potential"))
-            return res
+        
+        return res
 
     @api.onchange('partner_id','sale_type_id')
     def onchange_partner(self):
