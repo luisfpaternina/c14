@@ -11,11 +11,10 @@ class AccountMove(models.Model):
     subscription_id = fields.Many2one(
         'sale.subscription',
         string="Subscription",
-        related="invoice_line_ids.subscription_id")
+        compute="_compute_subscription")
     product_id = fields.Many2one(
         'product.template',
-        'Gadgets',
-        related="subscription_id.product_id")
+        'Gadgets')
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type')
     task_user_id = fields.Many2one(
