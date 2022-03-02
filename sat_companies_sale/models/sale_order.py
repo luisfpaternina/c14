@@ -68,6 +68,8 @@ class SaleOrder(models.Model):
     pdf_description = fields.Char(
         string="PDF description",
         tracking=True)
+    is_pdf_true = fields.Boolean(
+        string="PDF True")
 
 
     @api.onchange('state','name')
