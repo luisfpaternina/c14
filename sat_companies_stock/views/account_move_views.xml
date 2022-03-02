@@ -10,7 +10,7 @@
                     <field name="check_contract_type" invisible="True"/>
                     <group name="group_left" string="Gadget information">
                         <field name="check_product" invisible="True"/>
-                        <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]" required="True"/>
+                        <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]"/>
                         <field name="rae"/>
                         <field name="task_user_id" attrs="{'invisible': [('check_product', '!=', True)],'required': [('check_product', '!=', False)]}"/>
                         <field name="subscription_id" options="{'no_create': True, 'no_create_edit':True}"/>
