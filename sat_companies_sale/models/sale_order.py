@@ -65,7 +65,7 @@ class SaleOrder(models.Model):
         string="R.A.E",
         related="product_id.rae")
     contract_send = fields.Boolean()
-    send_pdf_description = fields.Text(
+    pdf_description = fields.Text(
         string="PDF description",
         tracking=True)
 
