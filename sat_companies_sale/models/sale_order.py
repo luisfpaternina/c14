@@ -74,7 +74,7 @@ class SaleOrder(models.Model):
     def send_pdf_description(self):
         for record in self:
             if record.pdf_file_sale_contract:
-                record.send_pdf_description = 'CONTRATO HA SIDO FIRMADO'
+                record.pdf_description = 'CONTRATO HA SIDO FIRMADO'
 
 
     @api.onchange('product_id')
