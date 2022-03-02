@@ -116,3 +116,7 @@ class SaleSuscriptionDemand(models.Model):
     trial_citation = fields.Datetime(
         string="Trial citation",
         tracking=True)
+    partner_lawyer_id = fields.Many2one(
+        'res.partner',
+        string="Lawyer",
+        tracking=True)
