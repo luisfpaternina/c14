@@ -43,7 +43,6 @@
                 <field name="check_product" invisible="1"/>
                 <field name="check_contract_type" invisible="1"/>
                 <field name="quote_date_sent"/>
-                <field name="send_pdf_description"/>
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
