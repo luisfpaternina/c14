@@ -6,14 +6,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-01 17:03+0000\n"
-"PO-Revision-Date: 2022-03-01 17:03+0000\n"
+"POT-Creation-Date: 2022-03-02 15:07+0000\n"
+"PO-Revision-Date: 2022-03-02 15:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.template_email_contract_extension
+msgid ""
+"\n"
+"                <center><strong>ANEXO AMPLIACION DURACION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>\n"
+"                <br/>\n"
+"                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
+"                <p>Por una parte, D.${object.company_id.partner_manager_id.name}, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>\n"
+"                <br/>\n"
+"                <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>\n"
+"                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando el presente <strong>ANEXO DE AMPLIACION DE LA DURACION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR,</strong> que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>\n"
+"                <strong><p>ACUERDAN:</p></strong>\n"
+"                <p><strong>Primero.-</strong> Que la COMUNIDAD DE PROPIETARIOS tiene que pagar la cantidad de________ en virtud de del procedimiento judicial que se ha tramitado en Juzgado de 1ª Instancia Nº … de …..,  autos …….., cuya sentencia o fallo se ha dictado con fecha ……………..</p>\n"
+"                <p><strong>Segundo.-</strong>Que mediante el presente acuerdo ambas partes amplían el contrato de mantenimiento de ascensor que tenían suscrito con fecha ________________por periodo de……….años , renovable por iguales periodos,  por lo que , con esta prórroga el  contrato   vence   el .…  de ……..  de  ……….manteniéndose vigentes el resto de sus cláusulas.</p>\n"
+"                <p><strong>Tercero.-</strong>Que la Mercantil ${object.company_id.name}  en este acto presta a la comunidad la cantidad de _____ euros para el pago de la cuantía que consta en el acuerdo primero.</p>\n"
+"                <p><strong>Cuarto -</strong> Para el caso de que la COMUNIDAD DE PROPIETARIOS resuelva anticipadamente el contrato de mantenimiento antes del transcurso de la duración pactada, ésta deberá reintegrar a la Mercantil  ${object.company_id.name} la cantidad prestada en el hecho tercero</p>\n"
+"                <p><strong>Quinto -</strong> Que ambas partes se someten, del modo más expreso, a los Tribunales de Justicia de Elche para cualquier divergencia, con renuncia a otro fuero que les pudiera corresponder.</p>\n"
+"                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>\n"
+"                <br/><br/>\n"
+"                <p>${object.company_id.name}</p>\n"
+"                 \n"
+"            "
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:mail.template,body_html:sat_companies_sale_suscription.template_email_contract_suspension_repot
@@ -91,6 +115,12 @@ msgstr "Fec.Consignación"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__demand_line_ids
 msgid "Amounts"
 msgstr "Importes"
+
+#. module: sat_companies_sale_suscription
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_extension
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_extension_ir_actions_server
+msgid "Ampliación de contrato"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__apr
@@ -283,6 +313,11 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__recurring_rule_boundary
+msgid "Duration"
+msgstr "Duración"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__email
 msgid "Email"
 msgstr "Correo"
@@ -454,6 +489,11 @@ msgid "Is extension"
 msgstr "Ampliación"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__is_extension_stage
+msgid "Is extension stage"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__jan
 msgid "January"
 msgstr "Enero"
@@ -580,8 +620,19 @@ msgid "Notes"
 msgstr "Notas"
 
 #. module: sat_companies_sale_suscription
+#: model:mail.template,subject:sat_companies_sale_suscription.template_email_contract_extension
+msgid "Notificación ampliación de contrato"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:mail.template,subject:sat_companies_sale_suscription.template_email_contract_suspension_repot
 msgid "Notificación suspensión de contrato"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_subscription_expired
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_subscription_expired_ir_actions_server
+msgid "Notificar vencimiento de suscripción"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -667,9 +718,29 @@ msgid "Phone"
 msgstr "Télefono"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription__document_ids
+msgid "Please attach Documents"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__city
 msgid "Population"
 msgstr "Población"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_powers
+msgid "Powers"
+msgstr "Poderes"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__partner_president_id
+msgid "President"
+msgstr "Presidente"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__president_phone
+msgid "President phone"
+msgstr "Teléf.Presidente"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.actions.act_window,name:sat_companies_sale_suscription.action_view_process
@@ -709,6 +780,11 @@ msgstr "Fec.Recepción"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_has_sms_error
 msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__document_ids
+msgid "SUBA SU ARCHIVO"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -785,8 +861,8 @@ msgid "Subscription type"
 msgstr "Tipo de suscripción"
 
 #. module: sat_companies_sale_suscription
-#: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_sale_order_offer
-#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_sale_order_offer_ir_actions_server
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_suspension
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_suspension_ir_actions_server
 msgid "Suspensión de contrato"
 msgstr ""
 
