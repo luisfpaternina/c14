@@ -111,4 +111,5 @@ class SaleSuscriptionDemand(models.Model):
         string="President",
         tracking=True)
     president_phone = fields.Char(
-        string="President phone")
+        string="President phone",
+        related="partner_president_id.phone")
