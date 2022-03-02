@@ -59,8 +59,8 @@ class AccountMove(models.Model):
     def _compute_gadget_name(self):
         for record in self:
             if record.subscription_id:
-                record.product_id = record.subscription_id.product_id.id
-                record.task_user_id = record.subscription_id.task_user_id.id
+                record.product_id = record.subscription_id.product_id
+                record.task_user_id = record.subscription_id.task_user_id
             else:
                 record.product_id = False
                 record.task_user_id = False
