@@ -894,7 +894,7 @@ msgstr "Tot.Compensación"
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__trial_citation
 msgid "Trial citation"
-msgstr ""
+msgstr "Citación juicio"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__trimester
