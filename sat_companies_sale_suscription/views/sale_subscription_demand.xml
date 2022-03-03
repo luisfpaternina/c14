@@ -120,6 +120,12 @@
                                     <group>
                                         <field name="president_phone"/>
                                     </group>
+                                    <group>
+                                        <field name="trial_citation"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
                                 </group>
                             </page>
                             <page string="Observations">
