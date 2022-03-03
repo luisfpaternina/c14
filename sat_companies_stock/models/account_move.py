@@ -44,26 +44,6 @@ class AccountMove(models.Model):
         related="product_id.subscription_template_id")
 
 
-    @api.depends('partner_id')
-    def _compute_subscription(self):
-        for line in self.invoice_line_ids:
-            if line.subscription_id:
-                self.subscription_id = line.subscription_id.id
-            else:
-                self.subscription_id = False
-
-
-    @api.depends('subscription_id')
-    def _compute_gadget_name(self):
-        for record in self:
-            if record.subscription_id:
-                record.product_id = record.subscription_id.product_id
-                record.task_user_id = record.subscription_id.task_user_id
-            else:
-                record.product_id = False
-                record.task_user_id = False
-
-
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):
         for record in self:
