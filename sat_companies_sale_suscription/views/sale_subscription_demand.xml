@@ -126,6 +126,12 @@
                                     <group>
                                         
                                     </group>
+                                    <group>
+                                        <field name="partner_lawyer_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="partner_attorney_id"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="Observations">
