@@ -1529,7 +1529,7 @@ msgstr "Tipo de presupuesto"
 #. module: sat_companies_sale
 #: model:ir.model,name:sat_companies_sale.model_sale_type_service
 msgid "Sale type service"
-msgstr "Tipo de servicio"
+msgstr "Información contrato"
 
 #. module: sat_companies_sale
 #: model:ir.model,name:sat_companies_sale.model_sale_advance_payment_inv
@@ -1694,7 +1694,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__type_service_id
 #: model:ir.ui.menu,name:sat_companies_sale.menu_sale_type_service
 msgid "Type Service"
-msgstr "Tipo de servicio"
+msgstr "Información contrato"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__type_contract
@@ -1705,7 +1705,7 @@ msgstr "Tipo de contrato"
 #: model:ir.actions.act_window,name:sat_companies_sale.sale_type_servic_action
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__type_service_id
 msgid "Type service"
-msgstr "Tipo de oportunidad"
+msgstr "Información contrato"
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation

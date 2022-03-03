@@ -13,7 +13,8 @@ class SaleTypeService(models.Model):
     code = fields.Char(
         string="Code")
     active = fields.Boolean(
-        string="Active")
+        string="Active",
+        default=True)
     order_id = fields.Many2one(
         'sale.order',
         string="Sale Order")

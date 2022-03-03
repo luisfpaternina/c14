@@ -267,7 +267,14 @@ class SaleSuscriptionInherit(models.Model):
                         #break
                     #res._recompute_dynamic_lines(recompute_all_taxes=True, recompute_tax_base_amount=True)
                     #res._recompute_tax_lines(recompute_tax_base_amount=False)
-
+            else:
+                vals = {
+                        'product_id': record.product_id.id,
+                        'task_user_id': record.task_user_id.id,
+                        'sale_type_id': record.sale_type_id.id,
+                        'gadgets_contract_type_id': record.gadgest_contract_type_id.id,
+                        }
+                res.write(vals)
             active_cron = False
 
         return res
