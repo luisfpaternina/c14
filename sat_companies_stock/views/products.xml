@@ -31,6 +31,7 @@
                             </group>
                             <group>
                                 <field name="high_date_call_center"/>
+                                <field name="gadget_low_date"/>
                             </group>
                             <group>
                                 <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"  domain="[&quot;&amp;&quot;,&quot;&amp;&quot;,&quot;&amp;&quot;,[&quot;is_oca&quot;,&quot;!=&quot;,True],[&quot;is_admin&quot;,&quot;!=&quot;,True],[&quot;is_maintainer&quot;,&quot;!=&quot;,True],[&quot;is_potential_client&quot;,&quot;!=&quot;,True]]"/>
