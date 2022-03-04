@@ -467,7 +467,7 @@ class ProductTemplate(models.Model):
     def _onchange_is_gadget(self):
         for record in self:
             if record.is_gadget == True:
-                record.type = 'consu'
+                record.type = 'service'
 
     @api.onchange('partner_id')
     def _onchange_partner_admin_id(self):

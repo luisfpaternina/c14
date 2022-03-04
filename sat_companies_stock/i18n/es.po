@@ -2368,7 +2368,7 @@ msgstr "Fecha puesta en marcha"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_state_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__state_gadget
 msgid "State"
-msgstr "Relacionar estado"
+msgstr "Estado"
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_state_record

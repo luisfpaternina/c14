@@ -8,4 +8,5 @@
         <field name="uom_id" ref="uom.product_uom_day"/>
         <field name="uom_po_id" ref="uom.product_uom_day"/>
     </record>
+    
 </odoo>
