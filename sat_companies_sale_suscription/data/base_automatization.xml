@@ -36,4 +36,15 @@
         <field name="filter_domain">[["recurring_rule_boundary","=","limited"]]</field>
     </record>
 
+    <record id="automatization_welcome_client" model="base.automation">
+        <field name="name">Correo de bienvenida</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_email_welcome"/>
+        <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
+        <field name="filter_domain">[["pdf_file_sale_contract","!=",False]]</field>
+    </record>
+
 </odoo>
