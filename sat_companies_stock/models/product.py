@@ -461,6 +461,17 @@ class ProductTemplate(models.Model):
         string="Gadget high date")
     gadget_low_date = fields.Date(
         string="Gadget low date")
+    is_validate_state = fields.Boolean(
+        string="Validate state",
+        compute="_compute_gadget_state")
+
+    
+    @api.depends('gadget_state_id')
+    def _compute_gadget_state(self):
+        if self.gadget_state_id.code == '01':
+            self.is_validate_state = True
+        else:
+            self.is_validate_state = False
     
 
     @api.onchange('is_gadget')
@@ -468,6 +479,7 @@ class ProductTemplate(models.Model):
         for record in self:
             if record.is_gadget == True:
                 record.type = 'service'
+
 
     @api.onchange('partner_id')
     def _onchange_partner_admin_id(self):
