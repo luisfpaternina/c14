@@ -8,7 +8,7 @@ class   PurchaseOrderType(models.Model):
     _description = 'Purchase order type'
 
     name = fields.Char(
-        String="Name",
+        string="Name",
         tracking=True)
     active = fields.Boolean(
         string="Active")

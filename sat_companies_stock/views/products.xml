@@ -7,7 +7,8 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[(@name='default_code')]" position="after">
-                <field name="rae" attrs="{'required': [('is_gadget', '=', True)]}"/>
+                <field name="rae" attrs="{'invisible': [('is_gadget', '!=', True)]}"/>
+                <field name="is_validate_state" invisible="1"/>
             </xpath>
          
             <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
@@ -31,6 +32,7 @@
                             </group>
                             <group>
                                 <field name="high_date_call_center"/>
+                                <field name="gadget_low_date"/>
                             </group>
                             <group>
                                 <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"  domain="[&quot;&amp;&quot;,&quot;&amp;&quot;,&quot;&amp;&quot;,[&quot;is_oca&quot;,&quot;!=&quot;,True],[&quot;is_admin&quot;,&quot;!=&quot;,True],[&quot;is_maintainer&quot;,&quot;!=&quot;,True],[&quot;is_potential_client&quot;,&quot;!=&quot;,True]]"/>

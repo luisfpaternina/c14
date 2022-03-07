@@ -103,3 +103,24 @@ class SaleSuscriptionDemand(models.Model):
         'subscription.process',
         string="Process",
         tracking=True)
+    is_powers = fields.Boolean(
+        string="Powers",
+        tracking=True)
+    partner_president_id = fields.Many2one(
+        'res.partner',
+        string="President",
+        tracking=True)
+    president_phone = fields.Char(
+        string="President phone",
+        related="partner_president_id.phone")
+    trial_citation = fields.Datetime(
+        string="Trial citation",
+        tracking=True)
+    partner_lawyer_id = fields.Many2one(
+        'res.partner',
+        string="Lawyer",
+        tracking=True)
+    partner_attorney_id = fields.Many2one(
+        'res.partner',
+        string="Attorney",
+        tracking=True)

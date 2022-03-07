@@ -29,7 +29,7 @@
                         type="object"
                         class="oe_highlight"
                         string="Send Contrat to signature"
-                        attrs="{'invisible': ['|',('contract_send', '=', True),('state', '!=', 'sent')]}"/>
+                        attrs="{'invisible': ['|',('contract_send', '=', True),('state', 'not in', ['sent','sale'])]}"/>
                 <button name="action_send_email" string="Send contract suspension" type="object" invisible="1"/>
             </xpath>
 
@@ -43,7 +43,7 @@
                 <field name="check_product" invisible="1"/>
                 <field name="check_contract_type" invisible="1"/>
                 <field name="quote_date_sent"/>
-                <field name="pdf_description"/>
+                <field name="pdf_description" invisible="1"/>
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">

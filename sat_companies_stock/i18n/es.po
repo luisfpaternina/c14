@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 12:45+0000\n"
-"PO-Revision-Date: 2022-02-28 12:45+0000\n"
+"POT-Creation-Date: 2022-03-04 15:10+0000\n"
+"PO-Revision-Date: 2022-03-04 15:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1019,9 +1019,21 @@ msgid "Gadget"
 msgstr "Aparato"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_high_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_high_date
+msgid "Gadget high date"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_account_move_inherit_product
 msgid "Gadget information"
 msgstr "Información aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_low_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_low_date
+msgid "Gadget low date"
+msgstr "Fecha baja aparato"
 
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
@@ -1116,7 +1128,7 @@ msgstr "Empresa Mto. alta"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__high_date
 msgid "High date"
-msgstr "Fecha alta"
+msgstr "Fecha alta Mto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_date_call_center
@@ -1648,7 +1660,7 @@ msgstr "Empresa Mto Baja"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__low_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__low_date
 msgid "Low date"
-msgstr "Fecha baja"
+msgstr "Fecha baja Mto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_machine_room
@@ -2356,7 +2368,7 @@ msgstr "Fecha puesta en marcha"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_state_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__state_gadget
 msgid "State"
-msgstr "Relacionar estado"
+msgstr "Estado"
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_state_record

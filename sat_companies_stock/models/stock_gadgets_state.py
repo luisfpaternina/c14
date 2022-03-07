@@ -14,6 +14,9 @@ class StockGadgetsState(models.Model):
         string="Active",
         tracking=True,
         default=True)
+    code = fields.Char(
+        string="Code",
+        tracking=True)
 
     @api.onchange('name')
     def _upper_name(self):        

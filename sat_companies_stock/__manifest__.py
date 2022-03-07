@@ -29,6 +29,7 @@
        
         'security/security.xml',
         'security/ir.model.access.csv',
+        'data/stock.gadgets.state.csv',
         'views/account_move_views.xml',
         'views/products.xml',
         'views/stock_gadgets.xml',
@@ -59,4 +60,3 @@
     ],
     'installable': True
 }
-

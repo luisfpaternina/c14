@@ -108,6 +108,30 @@
                                     <group>
                                         
                                     </group>
+                                    <group>
+                                        <field name="is_powers"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
+                                    <group>
+                                        <field name="partner_president_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                    <group>
+                                        <field name="president_phone"/>
+                                    </group>
+                                    <group>
+                                        <field name="trial_citation"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
+                                    <group>
+                                        <field name="partner_lawyer_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                    <group>
+                                        <field name="partner_attorney_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="Observations">

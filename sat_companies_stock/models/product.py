@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from .qr_code_base import generate_qr_code
@@ -456,12 +457,29 @@ class ProductTemplate(models.Model):
         string="Photo 2")
     photo3 = fields.Binary(
         string="Photo 3")
+    gadget_high_date = fields.Date(
+        string="Gadget high date")
+    gadget_low_date = fields.Date(
+        string="Gadget low date")
+    is_validate_state = fields.Boolean(
+        string="Validate state",
+        compute="_compute_gadget_state")
+
+    
+    @api.depends('gadget_state_id')
+    def _compute_gadget_state(self):
+        if self.gadget_state_id.code == '01':
+            self.is_validate_state = True
+        else:
+            self.is_validate_state = False
+    
 
     @api.onchange('is_gadget')
     def _onchange_is_gadget(self):
         for record in self:
             if record.is_gadget == True:
-                record.type = 'consu'
+                record.type = 'service'
+
 
     @api.onchange('partner_id')
     def _onchange_partner_admin_id(self):
@@ -479,11 +497,11 @@ class ProductTemplate(models.Model):
             self.partner_type_id = False
 
 
-    @api.depends('low_date')
+    @api.depends('gadget_low_date')
     def _validate_low_date(self):
         for record in self:
-            if record.low_date:
-                if date.today() > record.low_date:
+            if record.gadget_low_date:
+                if date.today() > record.gadget_low_date:
                     record.is_validate_date = True
                 else:
                     record.is_validate_date = False
@@ -491,7 +509,7 @@ class ProductTemplate(models.Model):
                 record.is_validate_date = False
 
 
-    @api.onchange('low_date','is_validate_date')
+    @api.onchange('gadget_low_date','is_validate_date')
     def _active_product(self):
         for record in self:
             if record.is_validate_date:

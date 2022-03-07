@@ -8,7 +8,7 @@ class ResPartnerCommunities(models.Model):
     _description = 'Communities'
 
     name = fields.Char(
-        String="Name",
+        string="Name",
         tracking=True)
     partner_id = fields.Many2one(
         'res.partner',
