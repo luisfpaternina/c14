@@ -7,7 +7,7 @@ class ResPartnerGuardZones(models.Model):
     _rec_name = 'code'
 
     name = fields.Char(
-        String="Guard zone name",
+        string="Guard zone name",
         tracking=True)
     code = fields.Char(
         string="Code", 
