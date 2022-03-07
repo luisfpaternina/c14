@@ -60,4 +60,3 @@
     ],
     'installable': True
 }
-
