@@ -8,7 +8,7 @@ class ResPartnerType(models.Model):
     _description = 'Partner type'
 
     name = fields.Char(
-        String="Partner's type",
+        string="Partner's type",
         tracking=True)
     code = fields.Char(
         string="Code",
