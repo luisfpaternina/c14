@@ -7,7 +7,7 @@ class ResPartnerZones(models.Model):
     _rec_name = 'code'
 
     name = fields.Char(
-        string="Zone's name",
+        String="Zone's name",
         tracking=True)
     code = fields.Char(
         string="Code", 

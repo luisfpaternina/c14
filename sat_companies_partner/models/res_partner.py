@@ -114,8 +114,7 @@ class ResPartner(models.Model):
     client_code = fields.Char(
         string="Client code",
         tracking=True,
-        copy=False,
-        default='New')
+        copy=False)
     gadget_ids = fields.Many2many(
         'product.template',
         compute="compute_gadgets_partner",

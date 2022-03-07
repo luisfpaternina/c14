@@ -9,7 +9,7 @@ class ResPartnerPopulation(models.Model):
     _rec_name = 'code'
 
     name = fields.Char(
-        string="Partner's type",
+        String="Partner's type",
         tracking=True)
     code = fields.Char(
         string="Code",

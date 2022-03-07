@@ -9,7 +9,7 @@ class ResPartnerDelegation(models.Model):
     _rec_name = 'code'
 
     name = fields.Char(
-        string="Name",
+        String="Name",
         tracking=True)
     code = fields.Char(
         string="Postal Code",

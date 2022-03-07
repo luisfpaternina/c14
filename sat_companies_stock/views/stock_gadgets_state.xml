@@ -35,9 +35,6 @@
                             <group>
                                 <field name="active" widget="boolean_toggle"/>
                             </group>
-                            <group>
-                                <field name="code"/>
-                            </group>
                         </group>
                     </sheet>
                     <div class="oe_chatter">

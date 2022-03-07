@@ -8,7 +8,7 @@ class CrmLeadType(models.Model):
     _description = 'Oportunity type'
 
     name = fields.Char(
-        String="Name",
+        string="Name",
         tracking=True)
     active = fields.Boolean(
         string="Active",
