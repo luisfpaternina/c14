@@ -1128,7 +1128,7 @@ msgstr "Empresa Mto. alta"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__high_date
 msgid "High date"
-msgstr "Fecha alta"
+msgstr "Fecha alta Mto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_date_call_center
@@ -1660,7 +1660,7 @@ msgstr "Empresa Mto Baja"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__low_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__low_date
 msgid "Low date"
-msgstr "Fecha baja"
+msgstr "Fecha baja Mto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_machine_room
