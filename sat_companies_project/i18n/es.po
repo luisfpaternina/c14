@@ -381,12 +381,12 @@ msgstr "Proyecto existente"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_line
 msgid "Is line"
-msgstr ""
+msgstr "Línea"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_maintenance
 msgid "Is maintenance"
-msgstr ""
+msgstr "Mantenimiento"
 
 #. module: sat_companies_project
 #: model:ir.model,name:sat_companies_project.model_account_move

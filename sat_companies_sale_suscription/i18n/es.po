@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-03 14:14+0000\n"
-"PO-Revision-Date: 2022-03-03 14:14+0000\n"
+"POT-Creation-Date: 2022-03-08 19:39+0000\n"
+"PO-Revision-Date: 2022-03-08 19:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -55,6 +55,56 @@ msgid ""
 "                <p>Segundo.-Que mediante el presente escrito ambas partes acuerdan proceder con fecha de hoy y de mutuo acuerdo a su SUSPENSION  por periodo _____________________ , periodo en el que no se realizará mantenimiento ni reparación alguna al ascensor y en consecuencia  el cliente no deberá abonar el precio pactado,  quedando por tanto en suspenso el contrato y por ende todas las clausulas y acuerdos que constan en el mismo así como en los anexos que se hayan podido firmar vinculados a la prestación del servicio, por lo que ${object.company_id.name} no es responsable de lo que pueda suceder al ascensor en dicho periodo de suspensión.</p>\n"
 "                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>\n"
 "                <p></p>\n"
+"                 \n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.template_send_email_fired_template
+msgid ""
+"\n"
+"                <strong align=\"right\">\n"
+"                ${object.partner_id.name}<br></br>\n"
+"                ${object.partner_id.street}<br></br>\n"
+"                ${object.partner_id.zip}${object.partner_id.city}${object.partner_id.state_id.name}<br></br>\n"
+"                </strong>\n"
+"                <br/>\n"
+"                <p>Estimados vecinos,</p>\n"
+"                <br></br>\n"
+"                <p>Recientemente hemos recibido la rescisión de contrato de mantenimiento del ascensor de su comunidad con nuestra compañía, que le comunico se hará efectiva con fecha 18 de Agosto de 2021. </p>\n"
+"                <p>Queremos mostrarles nuestro más sincero agradecimiento por la confianza que han depositado durante todo este tiempo en nuestra compañía. Ha sido para nosotros una satisfacción contribuir al buen funcionamiento y a la seguridad del ascensor del edificio. </p>\n"
+"                <strong>¡MUCHAS GRACIAS!</strong>\n"
+"                <p>Porque durante este tiempo de colaboración hemos podido contribuir al mantenimiento del empleo en la ciudad y  al desarrollo de planes de responsabilidad social que nos han permitido apoyar iniciativas dirigidas a los más desfavorecidos o a fomentar el deporte amateur, sobre todo entre los más jóvenes.</p>\n"
+"                <strong>A partir de ahora vamos a trabajar con más empeño si cabe para recuperar su confianza y para que cuando lo consideren oportuno volvamos a ser la empresa de mantenimiento de su ascensor. </strong>\n"
+"                <strong>Por último, para seguir avanzando en el sistema de mejora continua de nuestra empresa, sería muy útil para nosotros que nos informaran de los motivos por la que han decidido dar de baja nuestro servicio, con un mensaje al correo ${object.company_id.email}</strong>\n"
+"                <p>Atentamente,</p>\n"
+"                <strong>${object.company_id.name}</strong>\n"
+"                 \n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.template_email_welcome
+msgid ""
+"\n"
+"                <strong align=\"right\">\n"
+"                ${object.partner_id.name}<br></br>\n"
+"                ${object.partner_id.street}<br></br>\n"
+"                ${object.partner_id.zip}${object.partner_id.city}${object.partner_id.state_id.name}<br></br>\n"
+"                </strong>\n"
+"                <br/>\n"
+"                <p>Estimados vecinos,</p>\n"
+"                <br></br>\n"
+"                <p>Todo el equipo de ${object.company_id.name} queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso desde 2005.</p>\n"
+"                <p>${object.company_id.name}</p>\n"
+"                <strong>¡MUCHAS GRACIAS!</strong>\n"
+"                <br></br>\n"
+"                <p>Si tienes cualquier tipo de duda, puedes llamarnos al 96 542 23 76 y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el ${object.partner_id.client_code}. Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta. </p>\n"
+"                <p>Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email ${object.company_id.email}</p>\n"
+"                <strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a día!</strong>\n"
+"                <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  <strong> ${object.company_id.name}. </strong></p>\n"
+"                <p>Nos vemos pronto,</p>\n"
+"                <p>${object.company_id.name}</p>\n"
 "                 \n"
 "            "
 msgstr ""
@@ -191,6 +241,12 @@ msgstr "Contrato"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__gadget_contract_type
 msgid "Contract type"
 msgstr "Tipo de suscripción"
+
+#. module: sat_companies_sale_suscription
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_welcome_client
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_welcome_client_ir_actions_server
+msgid "Correo de bienvenida"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__court_number
@@ -635,6 +691,11 @@ msgid "Notificación ampliación de contrato"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:mail.template,subject:sat_companies_sale_suscription.template_email_welcome
+msgid "Notificación de bienvenida"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:mail.template,subject:sat_companies_sale_suscription.template_email_contract_suspension_repot
 msgid "Notificación suspensión de contrato"
 msgstr ""
@@ -953,3 +1014,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "amount"
 msgstr "Importe"
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,subject:sat_companies_sale_suscription.template_send_email_fired_template
+msgid "¡Gracias! Baja"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:base.automation,name:sat_companies_sale_suscription.automatization_fired_subscription
+#: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_fired_subscription_ir_actions_server
+msgid "¡Gracias! baja"
+msgstr ""
