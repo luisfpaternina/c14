@@ -77,7 +77,7 @@ class SaleSuscriptionInherit(models.Model):
     @api.onchange('product_id')
     def onchange_product_gadget_id(self):
         if self.product_id:
-            self.low_date = product_id.low_date
+            self.low_date = self.product_id.low_date
             self.res_partner_low_mto_id = self.product_id.res_partner_low_mto_id.id
 
 
