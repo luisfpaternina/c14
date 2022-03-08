@@ -74,6 +74,13 @@ class SaleSuscriptionInherit(models.Model):
         string="Low mto")
 
 
+    @api.onchange('product_id')
+    def onchange_product_gadget_id(self):
+        if self.product_id:
+            self.low_date = product_id.low_date
+            self.res_partner_low_mto_id = self.product_id.res_partner_low_mto_id.id
+
+
     @api.depends('stage_id')
     def _compute_extension_stage(self):
         for record in self:
