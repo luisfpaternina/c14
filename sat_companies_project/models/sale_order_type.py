@@ -29,11 +29,11 @@ class SaleOrderType(models.Model):
         string="Tasks",
         tracking=True)
     is_maintenance = fields.Boolean(
-        string="Is maintenance",
-        compute="_compute_check_is_maintenance")
+        string="Is maintenance")
     is_line = fields.Boolean(
-        string="Is line",
-        compute="_compute_check_is_maintenance")
+        string="Is line")
+    is_other = fields.Boolean(
+        string="Other")
 
 
     @api.onchange('name')
