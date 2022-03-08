@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[(@name='default_code')]" position="after">
-                <field name="rae" attrs="{'required': [('is_gadget', '=', True)]}"/>
+                <field name="rae" attrs="{'invisible': [('is_gadget', '=', True)]}"/>
             </xpath>
          
             <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
