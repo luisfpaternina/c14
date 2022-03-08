@@ -67,6 +67,11 @@ class SaleSuscriptionInherit(models.Model):
         help='Please attach Documents',
         copy=False,
         tracking=True)
+    low_date = fields.Date(
+        string="Low date")
+    res_partner_low_mto_id = fields.Many2one(
+        'res.partner',
+        string="Low mto")
 
 
     @api.depends('stage_id')
