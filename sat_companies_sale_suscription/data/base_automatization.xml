@@ -40,7 +40,7 @@
         <field name="name">Correo de bienvenida</field>
         <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
         <field name="state">email</field>
-        <field name="trigger">on_create_or_write</field>
+        <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_welcome"/>
         <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
@@ -59,10 +59,10 @@
     </record>
 
     <record id="automatization_welcome_mto_subscription" model="base.automation">
-        <field name="name">Bienvenidos! Comunidad de propietarios</field>
+        <field name="name">Comunidad de propietarios/servicios jurídicos</field>
         <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
         <field name="state">email</field>
-        <field name="trigger">on_create_or_write</field>
+        <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_company"/>
         <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
@@ -70,14 +70,14 @@
     </record>
 
     <record id="automatization_low_mto_company_subscription" model="base.automation">
-        <field name="name">Concluir servicios de mantenimiento</field>
+        <field name="name">Carta comunicación mantenedora baja</field>
         <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
         <field name="state">email</field>
-        <field name="trigger">on_create_or_write</field>
+        <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_template"/>
-        <field name="filter_pre_domain">[["low_date","!=",False]]</field>
-        <field name="filter_domain">[["res_partner_low_mto_id","!=",False]]</field>
+        <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
+        <field name="filter_domain">[["pdf_file_sale_contract","!=",False]]</field>
     </record>
 
 </odoo>
