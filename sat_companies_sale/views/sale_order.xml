@@ -88,6 +88,7 @@
                     </group>
                     <group name="group_right">
                         <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+                        <field name="udn_id" options="{'no_create': True, 'no_create_edit':True}"/>
                     </group>
 
                 </group>
