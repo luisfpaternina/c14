@@ -15,6 +15,9 @@ class SaleOrder(models.Model):
         string="Is a potential client",
         tracking=True,
         related="partner_id.is_potential_client")
+    udn_id = fields.Many2one(
+        'project.task.categ.udn',
+        string="Udn")
     
 
     def get_task_sale_type(self):
