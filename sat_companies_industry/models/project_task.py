@@ -126,7 +126,7 @@ class ProjectTask(models.Model):
     @api.onchange('ot_type_id')
     def domain_udn(self):
         for record in self:
-            if record.sale_type_id:
+            if record.ot_type_id:
                 return {'domain': {'categ_udn_id': [('ot_type_id', '=', record.ot_type_id.id)]}}
             else:
                 return {'domain': {'udn_id': []}}
