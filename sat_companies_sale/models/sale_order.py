@@ -75,6 +75,16 @@ class SaleOrder(models.Model):
         string="Udn")
 
 
+    @api.onchange('sale_type_id')
+    def domain_saletype_udn(self):
+        for record in self:
+            if record.sale_type_id:
+                return {'domain': {'udn_id': [('sale_type_id', '=', record.udn_id.ot_type_id.id)]}}
+            else:
+                return {'domain': {'udn_id': []}}
+
+
+
     @api.onchange('state','name')
     def send_pdf_description(self):
         for record in self:
