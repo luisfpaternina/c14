@@ -129,7 +129,7 @@ class ProjectTask(models.Model):
             if record.ot_type_id:
                 return {'domain': {'categ_udn_id': [('ot_type_id', '=', record.ot_type_id.id)]}}
             else:
-                return {'domain': {'udn_id': []}}
+                return {'domain': {'categ_udn_id': []}}
 
 
     @api.onchange('contact_person')
