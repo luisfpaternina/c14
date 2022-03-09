@@ -76,8 +76,8 @@
         <field name="trigger">on_create_or_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_template"/>
-        <field name="filter_pre_domain"></field>
-        <field name="filter_domain"></field>
+        <field name="filter_pre_domain">[["low_date","!=",False]]</field>
+        <field name="filter_domain">[["res_partner_low_mto_id","!=",False]]</field>
     </record>
 
 </odoo>
