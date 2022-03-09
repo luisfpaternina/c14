@@ -35,6 +35,8 @@
         'data/contract_extension.xml',
         'data/welcome_template.xml',
         'data/fired_template.xml',
+        'data/send_email_low_mto_company.xml',
+        'data/send_email_welcome_mto_company.xml',
         'data/base_automatization.xml',
         'views/sale_suscription_template_view.xml',
         'views/sale_order_template.xml',

@@ -11,8 +11,8 @@
                     <group name="group_left" string="Gadget information">
                         <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]" required="True"/>
                         <field name="task_user_id"/>
-                        <field name="low_date"/>
-                        <field name="res_partner_low_mto_id"/>
+                        <field name="low_date" invisible="True"/>
+                        <field name="res_partner_low_mto_id" invisible="True"/>
                         <!--
                         <label for="date_begin" string="Assignment date" attrs="{'invisible': [('product_id', '=', False)]}"/>
                         <div class="w-100">

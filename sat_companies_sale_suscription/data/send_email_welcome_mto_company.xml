@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_send_low_mto_company" model="mail.template">
+            <field name="name">Comunidad de propietarios</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">¡Bienvenidos!</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <br/>
+                <p>Comunidad de Propietarios</p>
+                <p>Muy Sres. nuestros:</p>
+                <p>En primer lugar agradecer su confianza depositada en Ascensores Serki para el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que desde que usted firma el contrato de mantenimiento, ${object.company_id.name} pone a  disposición de su comunidad nuestros servicios jurídicos para el asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora.</p>
+                <p>La comunidad de propietarios se compromete a facilitar en todo momento y de forma inmediata la información de cualquier tipo (comunicaciones, cartas o notificaciones) que sea destinataria por parte de la anterior empresa conservadora u organismo oficial, en relación al cambio de empresa conservadora, colaborando en todo momento para un  correcto desarrollo del derecho de defensa de la comunidad ejercido a través de sus representantes, en este caso procuradores y abogados designados. </p>
+                <p>Una vez conocida la sentencia judicial o acuerdo extrajudicial, como consecuencia de la resolución unilateral del contrato de mantenimiento suscrito con la anterior empresa conservadora, la comunidad de propietarios o persona física o jurídica se compromete a continuar el mantenimiento con Ascensores Serki durante un periodo determinado que se acuerde en el anexo de ampliación que se firme en ese momento. A cambio, Ascensores Serki, por medio del presente documento, se compromete a asumir a su costa la indemnización a que hubiere lugar, por sentencia judicial o acuerdo extrajudicial. Cantidad de la que ${object.company_id.name} no se hace responsable en el caso de resolución anticipada del contrato de mantenimiento suscrito con Ascensores Serki por parte del cliente, teniendo que abonar este dichas cantidades</p>
+                <p>De conformidad con lo dispuesto firman,</p>
+                <p>En……………a……… de……………………. de…………..</p>
+                <br></br>
+                <strong>${object.company_id.name}</strong>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
