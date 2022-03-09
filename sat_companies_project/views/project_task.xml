@@ -165,7 +165,7 @@
                 </group>
             </xpath>
 
-            <xpath expr="//field[@name='categ_udn_id']" position="after">
+            <xpath expr="//field[@name='categ_udn_id']" position="before">
                 <field name="ot_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
                 <field name="gadgest_contract_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
             </xpath>

@@ -123,6 +123,15 @@ class ProjectTask(models.Model):
         related="product_id.rae")
 
 
+    @api.onchange('ot_type_id')
+    def domain_udn(self):
+        for record in self:
+            if record.sale_type_id:
+                return {'domain': {'categ_udn_id': [('ot_type_id', '=', record.ot_type_id.id)]}}
+            else:
+                return {'domain': {'udn_id': []}}
+
+
     @api.onchange('contact_person')
     def _capitalizate_name(self):        
         self.contact_person = self.contact_person.title() if self.contact_person else False
