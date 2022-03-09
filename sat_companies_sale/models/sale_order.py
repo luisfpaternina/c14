@@ -70,6 +70,9 @@ class SaleOrder(models.Model):
         tracking=True)
     is_pdf_true = fields.Boolean(
         string="PDF True")
+    udn_id = fields.Many2one(
+        'project.task.categ.udn',
+        string="Udn")
 
 
     @api.onchange('state','name')
