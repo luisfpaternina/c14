@@ -79,7 +79,7 @@ class SaleOrder(models.Model):
     def domain_saletype_udn(self):
         for record in self:
             if record.sale_type_id:
-                return {'domain': {'udn_id': [('sale_type_id', '=', record.udn_id.ot_type_id.id)]}}
+                return {'domain': {'udn_id': [('ot_type_id', '=', record.udn_id.id)]}}
             else:
                 return {'domain': {'udn_id': []}}
 
