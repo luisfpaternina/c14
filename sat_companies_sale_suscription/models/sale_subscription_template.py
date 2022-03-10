@@ -47,6 +47,12 @@ class SaleSuscriptionTemplateInherit(models.Model):
         string="Days number")
     days_between_visits = fields.Integer(
         string="Days between visits")
+    contract_duration = fields.Integer(
+        string="Contract duration")
+    contract_recurring_rule = fields.Selection([
+        ('days','Days'),
+        ('months','Months'),
+        ('years','Years')],string="Contract recurring rule")
 
     """
     sale_order_template_id = fields.Many2one(
