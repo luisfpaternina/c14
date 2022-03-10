@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import logging
@@ -161,6 +162,8 @@ class ResPartner(models.Model):
         string="Is a community")
     is_billing_administrator = fields.Boolean(
         string="Is billing administrator")
+    community_president = fields.Char(
+        string="Community president")
 
 
     @api.onchange('is_acommunity')

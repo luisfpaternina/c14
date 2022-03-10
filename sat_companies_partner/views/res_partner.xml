@@ -23,26 +23,33 @@
             <xpath expr="//field[(@name='street')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+            
             <xpath expr="//field[(@name='vat')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+
             <xpath expr="//field[(@name='city')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+
             <xpath expr="//field[(@name='state_id')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+
             <xpath expr="//field[(@name='zip')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+
             <xpath expr="//field[(@name='country_id')]" position="attributes">
                 <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
             </xpath>
+
             <xpath expr="//field[(@name='category_id')]" position="after">
                 <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
                 <field name="delegation_name"/>
                 <field name="high_date"/>
                 <field name="low_date"/>
+                <field name="community_president" attrs="{'invisible': [('is_community', '!=', True)]}"/>
             </xpath>
 
             <xpath expr="//field[(@name='email')]" position="after">

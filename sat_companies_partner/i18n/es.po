@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 12:55+0000\n"
-"PO-Revision-Date: 2022-02-21 12:55+0000\n"
+"POT-Creation-Date: 2022-03-10 12:21+0000\n"
+"PO-Revision-Date: 2022-03-10 12:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,12 @@ msgstr "Comunidades"
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__partner_community_id
 msgid "Community"
 msgstr "Comunidad"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__community_president
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__community_president
+msgid "Community president"
+msgstr "Presidente comunidad"
 
 #. module: sat_companies_partner
 #: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
@@ -367,6 +373,7 @@ msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
 #: code:addons/sat_companies_partner/models/res_partner.py:0
 #, python-format
 msgid "Invalid email format!"
@@ -760,13 +767,13 @@ msgstr "Provincia"
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__payment_term_maintenance_id
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__payment_term_maintenance_id
 msgid "Terms maintenance sale"
-msgstr ""
+msgstr "Plazos de pago mantenimiento"
 
 #. module: sat_companies_partner
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__payment_term_tel_id
 #: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__payment_term_tel_id
 msgid "Terms telephone sale"
-msgstr ""
+msgstr "Plazos de pago línea"
 
 #. module: sat_companies_partner
 #: model:ir.model.constraint,message:sat_companies_partner.constraint_res_partner_client_code_uniq
@@ -774,12 +781,14 @@ msgid "The client code is unique!"
 msgstr "El código del cliente debe ser unico"
 
 #. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
 #: code:addons/sat_companies_partner/models/res_partner.py:0
 #, python-format
 msgid "The mobile number cannot contain letters"
 msgstr "El móvil debe tener al menos 10 digitos y no puede contener letras"
 
 #. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
 #: code:addons/sat_companies_partner/models/res_partner.py:0
 #: code:addons/sat_companies_partner/models/res_partner.py:0
 #, python-format
@@ -787,6 +796,7 @@ msgid "The percentage cannot be greater than 100"
 msgstr "El valor del porcentage no puede ser mayor a 100%"
 
 #. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
 #: code:addons/sat_companies_partner/models/res_partner.py:0
 #, python-format
 msgid "The phone number cannot contain letters"
