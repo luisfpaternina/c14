@@ -30,6 +30,7 @@
                         <field name="pdf_file_sale_contract"/>
                         <field name="is_extension" attrs="{'invisible': [('is_extension_stage', '!=', True)]}"/>
                         <field name="is_extension_stage" invisible="1"/>
+                        <field name="is_suspension_stage"/>
                         <field name="recurring_rule_boundary" invisible="1"/>
                         <field name="document_ids" widget="many2many_binary" invisible="1"/>
                     </group>

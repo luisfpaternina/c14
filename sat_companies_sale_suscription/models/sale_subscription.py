@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import datetime
@@ -72,10 +73,12 @@ class SaleSuscriptionInherit(models.Model):
     res_partner_low_mto_id = fields.Many2one(
         'res.partner',
         string="Low mto")
+    is_suspension_stage = fields.Boolean(
+        string="Is suspension stage")
 
 
     def button_rejected_stage(self):
-        rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '01')], limit=1)
+        rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '1')], limit=1)
         self.write({'stage_id': rs.id})
 
 
@@ -89,10 +92,19 @@ class SaleSuscriptionInherit(models.Model):
     @api.depends('stage_id')
     def _compute_extension_stage(self):
         for record in self:
-            if record.stage_id.id == 2:
+            if record.stage_id.stage_code == '2':
                 record.is_extension_stage = True
             else:
                 record.is_extension_stage = False
+    
+
+    @api.onchange('stage_id')
+    def _compute_suspension_stage(self):
+        for record in self:
+            if record.stage_id.stage_code == '01':
+                record.is_suspension_stage = True
+            else:
+                record.is_suspension_stage = False
 
 
     @api.onchange('product_id')
