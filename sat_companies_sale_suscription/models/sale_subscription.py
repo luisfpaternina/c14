@@ -74,6 +74,11 @@ class SaleSuscriptionInherit(models.Model):
         string="Low mto")
 
 
+    def button_rejected_stage(self):
+        rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '01')], limit=1)
+        self.write({'stage_id': rs.id})
+
+
     @api.onchange('product_id')
     def onchange_product_gadget_id(self):
         if self.product_id:

@@ -48,6 +48,7 @@
         'views/subscription_inspection_report.xml',
         'views/subscription_process.xml',
         'views/res_company.xml',
+        'views/subscription_stage.xml',
         
     ],
     'installable': True
