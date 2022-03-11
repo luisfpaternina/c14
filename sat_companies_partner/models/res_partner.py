@@ -174,10 +174,10 @@ class ResPartner(models.Model):
             self.is_acommunity = False
 
 
-
     def compute_gadget_communitie(self):
         for record in self:
             record.gadget_communitie_ids = record.gadget_ids
+
 
     @api.depends(
         'name',
