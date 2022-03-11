@@ -8,7 +8,7 @@
         <field name="trigger">on_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_suspension_repot"/>
-        <field name="filter_domain">[["stage_id.name","ilike","Cerrado"]]</field>
+        <field name="filter_domain">[["stage_id.stage_code","=","1"]]</field>
     </record>
 
     <record id="automatization_sat_companies_extension" model="base.automation">

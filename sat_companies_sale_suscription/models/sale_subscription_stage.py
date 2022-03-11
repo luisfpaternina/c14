@@ -7,3 +7,8 @@ class SaleSubscriptionStage(models.Model):
 
     stage_code = fields.Char(
         string="Code")
+    
+
+    _sql_constraints = [
+        ('code_uniq', 'unique (stage_code)','Code must be unique!')
+    ]
