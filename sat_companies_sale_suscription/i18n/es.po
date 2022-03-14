@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-10 22:30+0000\n"
-"PO-Revision-Date: 2022-03-10 22:30+0000\n"
+"POT-Creation-Date: 2022-03-14 13:00+0000\n"
+"PO-Revision-Date: 2022-03-14 13:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -270,6 +270,11 @@ msgid "Ampliación de contrato"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__appeal_date
+msgid "Appeal date"
+msgstr "Fecha apelación"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__apr
 msgid "April"
 msgstr "Abril"
@@ -325,6 +330,11 @@ msgstr "Fecha"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_stage__stage_code
 msgid "Code"
 msgstr "Código"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.constraint,message:sat_companies_sale_suscription.constraint_sale_subscription_stage_code_uniq
+msgid "Code must be unique!"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_res_company
@@ -521,6 +531,11 @@ msgid "Embargo"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__end_payment
+msgid "End payment"
+msgstr "F.Fin pago"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__exclude_months
 msgid "Exlude Months"
 msgstr "Excluir meses"
@@ -667,6 +682,11 @@ msgid "Is a potential client"
 msgstr "Es contacto potencial"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_appeal
+msgid "Is appeal"
+msgstr "Apelación"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_account_setup_bank_manual_config__is_default
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner_bank__is_default
 msgid "Is default"
@@ -685,7 +705,22 @@ msgstr "Ampliación"
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__is_extension_stage
 msgid "Is extension stage"
-msgstr ""
+msgstr "Etapa de extensión"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_failure
+msgid "Is failure"
+msgstr "Fallo"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_settlement
+msgid "Is settlement"
+msgstr "Liquidación"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__is_suspension_stage
+msgid "Is suspension stage"
+msgstr "Etapa de suspensión"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__jan
@@ -1024,6 +1059,16 @@ msgid "Sales Order"
 msgstr "Pedido de venta"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__sentence_date
+msgid "Sentence date"
+msgstr "Fecha"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__sentence_number
+msgid "Sentence number"
+msgstr "N° sentencia"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__sep
 msgid "September"
 msgstr "Septiembre"
@@ -1032,6 +1077,11 @@ msgstr "Septiembre"
 #: model:mail.template,subject:sat_companies_sale_suscription.template_send_low_mto_company
 msgid "Servicios jurídicos"
 msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__settlement_date
+msgid "Settlement date"
+msgstr "Fecha de liquidación"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__signature
