@@ -132,6 +132,31 @@
                                     <group>
                                         <field name="partner_attorney_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                     </group>
+                                    <group>
+                                        <field name="is_failure"/>
+                                    </group>
+                                    <group>
+
+                                    </group>
+                                    <group>
+                                        <field name="sentence_number"/>
+                                    </group>
+                                    <group>
+                                        <field name="sentence_date"/>
+                                        <field name="end_payment"/>
+                                    </group>
+                                    <group>
+                                        <field name="is_appeal"/>
+                                    </group>
+                                    <group>
+                                        <field name="appeal_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="is_settlement"/>
+                                    </group>
+                                    <group>
+                                        <field name="settlement_date"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="Observations">

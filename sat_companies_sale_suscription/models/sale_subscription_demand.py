@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
@@ -124,3 +125,19 @@ class SaleSuscriptionDemand(models.Model):
         'res.partner',
         string="Attorney",
         tracking=True)
+    is_failure = fields.Boolean(
+        string="Is failure")
+    sentence_number = fields.Char(
+        string="Sentence number")
+    sentence_date = fields.Date(
+        string="Sentence date")
+    end_payment = fields.Date(
+        string="End payment")
+    is_appeal = fields.Boolean(
+        string="Is appeal")
+    appeal_date = fields.Date(
+        string="Appeal date")
+    is_settlement = fields.Boolean(
+        string="Is settlement")
+    settlement_date = fields.Date(
+        string="Settlement date")
