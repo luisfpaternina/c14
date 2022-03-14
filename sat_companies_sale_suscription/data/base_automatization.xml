@@ -43,8 +43,8 @@
         <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_welcome"/>
-        <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
-        <field name="filter_domain">[["pdf_file_sale_contract","!=",False]]</field>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
     </record>
 
     <record id="automatization_fired_subscription" model="base.automation">
@@ -65,8 +65,8 @@
         <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_company"/>
-        <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
-        <field name="filter_domain">[["pdf_file_sale_contract","!=",False]]</field>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
     </record>
 
     <record id="automatization_low_mto_company_subscription" model="base.automation">
