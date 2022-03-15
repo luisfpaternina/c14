@@ -18,6 +18,8 @@ class SaleOrder(models.Model):
     udn_id = fields.Many2one(
         'project.task.categ.udn',
         string="Udn")
+    is_forecast_made = fields.Boolean(
+        string="Is forecast made")
     is_maintenance = fields.Boolean(
         string="Is maintenance",
         related="sale_type_id.is_maintenance")
@@ -25,6 +27,17 @@ class SaleOrder(models.Model):
         string="Is mounting",
         related="sale_type_id.is_mounting")
     
+
+    @api.constrains(
+        'is_mounting',
+        'sale_type_id',
+        'is_forecast_made')
+    def _validate_mounting(self):
+        for record in self:
+            if record.is_mounting and record.is_forecast_made == False and record.state == 'draft':
+                raise ValidationError(_(
+                    'For this type of budget, a forecast must be made by the technical manager'))
+
 
     def get_task_sale_type(self):
         for record in self:
@@ -62,10 +75,15 @@ class SaleOrder(models.Model):
             raise ValidationError(_("Verify the type of client if it is potential"))
             return res
 
-    @api.onchange('partner_id','sale_type_id')
+    @api.onchange(
+        'partner_id',
+        'sale_type_id',
+        'product_id')
     def onchange_partner(self):
         for record in self:
             if record.sale_type_id.is_maintenance:
                 record.payment_term_id = record.partner_id.payment_term_maintenance_id
             elif record.sale_type_id.is_line:
                 record.payment_term_id = record.partner_id.payment_term_tel_id
+            else:
+                record.payment_term_id = record.partner_id.property_payment_term_id
