@@ -35,7 +35,8 @@
 
             <xpath expr="//form/sheet/group[1]/group[2]/field[(@name='payment_term_id')]" position="after"> 
                 <field name="pdf_file_sale_contract"/>
-                <field name="is_forecast_made" groups="sat_companies_sale.sale_forecast_manager_group"/>
+                <field name="is_mounting" invisible="1"/>
+                <field name="is_forecast_made" groups="sat_companies_sale.sale_forecast_manager_group" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after"> 

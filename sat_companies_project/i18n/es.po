@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-15 12:29+0000\n"
-"PO-Revision-Date: 2022-03-15 12:29+0000\n"
+"POT-Creation-Date: 2022-03-15 16:00+0000\n"
+"PO-Revision-Date: 2022-03-15 16:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -201,6 +201,7 @@ msgstr "Código"
 
 #. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
 msgid "Confirm"
 msgstr "Confirmar"
 
@@ -315,6 +316,18 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/sale_order.py:0
+#, python-format
+msgid ""
+"For this type of budget, a forecast must be made by the technical manager"
+msgstr "Este tipo de presupuesto debe tener una previsión por parte del responsable técnico"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_forecast_made
+msgid "Forecast Made"
+msgstr "Previsión realizada"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__from_gadget

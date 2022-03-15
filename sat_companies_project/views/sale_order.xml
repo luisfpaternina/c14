@@ -17,7 +17,16 @@
                 <field name="is_potential_client" invisible="1"/>
             </xpath>
 
-            
+            <xpath expr="//button[@name='action_confirm']" position="replace">
+                <button 
+                name="action_confirm" 
+                id="action_confirm" 
+                string="Confirm" 
+                class="btn-primary" 
+                type="object" 
+                attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
+            </xpath>
+
             <xpath expr="//field[(@name='partner_id')]" position="after">
                 <field name="is_potential_client" invisible="1"/>
                 <field name="is_mounting" invisible="1"/>
