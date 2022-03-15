@@ -44,10 +44,12 @@
                 <field name="check_contract_type" invisible="1"/>
                 <field name="quote_date_sent"/>
                 <field name="pdf_description" invisible="1"/>
+                <field name="is_maintenance" invisible="1"/>
+                <field name="is_mounting" invisible="1"/>
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
-                <page string="Tipos de Servicios en Contrato" name="type_service_contract">
+                <page string="Tipos de Servicios en Contrato" name="type_service_contract" attrs="{'invisible': [('is_maintenance', '!=', True)]}">
                     <group>
                         <field name="type_service_id">
                             <tree string="Check type Contract Service" editable="bottom">

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 14:25+0000\n"
-"PO-Revision-Date: 2022-02-21 14:25+0000\n"
+"POT-Creation-Date: 2022-03-15 12:29+0000\n"
+"PO-Revision-Date: 2022-03-15 12:29+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -294,6 +294,11 @@ msgid "Duplicate Task"
 msgstr "Duplicar tarea"
 
 #. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "ENVIAR PRESUPUESTO"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_follower_ids
 msgid "Followers"
@@ -384,9 +389,16 @@ msgid "Is line"
 msgstr "Línea"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_maintenance
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_maintenance
 msgid "Is maintenance"
 msgstr "Mantenimiento"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_mounting
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_mounting
+msgid "Is mounting"
+msgstr "Montaje"
 
 #. module: sat_companies_project
 #: model:ir.model,name:sat_companies_project.model_account_move
@@ -420,6 +432,16 @@ msgstr "Última actualización por"
 #: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__location_count
+msgid "Location count"
+msgstr ""
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inherit_view_project_project_sat_companies_project
+msgid "Locations"
+msgstr ""
 
 #. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
@@ -530,9 +552,19 @@ msgid "Order Lines"
 msgstr "Líneas de orden"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
+msgid "Other"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__payment_term_ot_id
 msgid "Payment term"
 msgstr "Plazos de pago"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__picking_ids
+msgid "Picking"
+msgstr ""
 
 #. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
@@ -610,7 +642,7 @@ msgstr "Error de entrega de SMS"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_order_id
 msgid "Sale Order"
-msgstr "Pedido"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_type_origin_id
@@ -659,11 +691,6 @@ msgstr "Línea de pedido de venta"
 #: model:ir.model.fields,help:sat_companies_project.field_project_project__sale_order_id
 msgid "Sales order to which the project is linked."
 msgstr "Pedido de venta al que está vinculado el proyecto."
-
-#. module: sat_companies_project
-#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
-msgid "Send PRO-FORMA Invoice"
-msgstr "Enviar factura PRO-FORMA"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__project_stage_ids
@@ -740,6 +767,18 @@ msgid "The Pit has been checked"
 msgstr "El foso ha sido inspeccionado"
 
 #. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#, python-format
+msgid "The bank account field must be filled out"
+msgstr ""
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#, python-format
+msgid "The identification number field must be filled out"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ot_type_id
 msgid "Tipo OT"
 msgstr ""
@@ -776,6 +815,16 @@ msgid "Transfer"
 msgstr "Albarán"
 
 #. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inherit_view_project_task_one
+msgid "Transfers"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__udn_id
+msgid "Udn"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_unread
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_unread
 msgid "Unread Messages"
@@ -795,6 +844,7 @@ msgid "Validate potential client in partner"
 msgstr ""
 
 #. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/sale_order-checkpoint.py:0
 #: code:addons/sat_companies_project/models/sale_order.py:0
 #, python-format
 msgid "Verify the type of client if it is potential"

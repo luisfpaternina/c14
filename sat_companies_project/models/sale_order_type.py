@@ -34,6 +34,8 @@ class SaleOrderType(models.Model):
         string="Is line")
     is_other = fields.Boolean(
         string="Other")
+    is_mounting = fields.Boolean(
+        string="Is mounting")
 
 
     @api.onchange('name')
