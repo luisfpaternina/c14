@@ -49,6 +49,8 @@
         'views/subscription_process.xml',
         'views/res_company.xml',
         'views/subscription_stage.xml',
+        'templates/welcome_template_subscription.xml',
+        'data/email_welcome_contract.xml',
         
     ],
     'installable': True

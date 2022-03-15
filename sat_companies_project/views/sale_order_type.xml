@@ -46,6 +46,7 @@
                             <group>
                                 <field name="is_maintenance"/>
                                 <field name="is_line"/>
+                                <field name="is_mounting"/>
                                 <field name="is_other"/>
                             </group>
 

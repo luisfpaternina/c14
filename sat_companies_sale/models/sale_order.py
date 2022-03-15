@@ -45,8 +45,7 @@ class SaleOrder(models.Model):
         string="Forecast Made")
     product_id = fields.Many2one(
         'product.template',
-        string='Gadget'
-        )
+        string='Gadget')
     task_user_id = fields.Many2one(
         'res.users',
         'Task User id')
@@ -73,6 +72,14 @@ class SaleOrder(models.Model):
     udn_id = fields.Many2one(
         'project.task.categ.udn',
         string="Udn")
+    is_maintenance = fields.Boolean(
+        string="Is maintenance")
+    is_line = fields.Boolean(
+        string="Is line")
+    is_other = fields.Boolean(
+        string="Other")
+    is_mounting = fields.Boolean(
+        string="Is mounting")
 
 
     @api.onchange('sale_type_id')
@@ -82,7 +89,6 @@ class SaleOrder(models.Model):
                 return {'domain': {'udn_id': [('ot_type_id', '=', record.sale_type_id.id)]}}
             else:
                 return {'domain': {'udn_id': []}}
-
 
 
     @api.onchange('state','name')

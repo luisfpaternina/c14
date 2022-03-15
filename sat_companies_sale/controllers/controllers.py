@@ -48,4 +48,3 @@ class SaleContractController(http.Controller):
             for sale in sales:
                 sale.signature_url_text = url_signature
                 sale.check_signature = True
-

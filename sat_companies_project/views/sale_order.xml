@@ -12,7 +12,7 @@
                     type="object" 
                     string="ENVIAR PRESUPUESTO" 
                     groups="sale.group_proforma_sales"
-                    attrs="{'invisible': [('is_potential_client', '!=', True)]}"
+                    attrs="{'invisible': [('is_maintenance', '!=', True)]}"
                     context="{'proforma': True}"/>
                 <field name="is_potential_client" invisible="1"/>
             </xpath>
@@ -20,6 +20,8 @@
             
             <xpath expr="//field[(@name='partner_id')]" position="after">
                 <field name="is_potential_client" invisible="1"/>
+                <field name="is_mounting" invisible="1"/>
+                <field name="is_maintenance" invisible="1"/>
             </xpath>
 
             <xpath expr="//field[@name='payment_term_id']" position="attributes">

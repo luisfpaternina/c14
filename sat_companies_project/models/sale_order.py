@@ -18,6 +18,12 @@ class SaleOrder(models.Model):
     udn_id = fields.Many2one(
         'project.task.categ.udn',
         string="Udn")
+    is_maintenance = fields.Boolean(
+        string="Is maintenance",
+        related="sale_type_id.is_maintenance")
+    is_mounting = fields.Boolean(
+        string="Is mounting",
+        related="sale_type_id.is_mounting")
     
 
     def get_task_sale_type(self):

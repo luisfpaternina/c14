@@ -4,6 +4,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import datetime
 from pytz import timezone
+import base64
 import logging
 
 
@@ -75,7 +76,64 @@ class SaleSuscriptionInherit(models.Model):
         string="Low mto")
     is_suspension_stage = fields.Boolean(
         string="Is suspension stage")
+    check_signature = fields.Boolean(
+        string="Check signature")
+    pdf_file_welcome = fields.Binary(
+        string="PDF file welcome",
+        compute="action_get_attachment")
+    signature_url_text = fields.Text(
+        string="Signature URL")
+    
 
+    def action_welcome_email_send(self):
+        self.contract_send = True
+        self.ensure_one()
+        template = self.env.ref('sat_companies_sale_suscription.template_email_welcome')
+        lang = self.env.context.get('lang')
+        template_id = template.id
+        if template.lang:
+            lang = template._render_lang(self.ids)[self.id]
+        ctx = {
+            'default_model': 'sale.subscription',
+            'default_res_id': self.ids[0],
+            'default_use_template': bool(template_id),
+            'default_template_id': template_id,
+            'default_composition_mode': 'comment',
+            'mark_so_as_sent': True,
+            'custom_layout': "mail.mail_notification_paynow",
+            'proforma': self.env.context.get('proforma', False),
+            'force_email': True,
+            'model_description': self.with_context(lang=lang).type_name,
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(False, 'form')],
+            'view_id': False,
+            'target': 'new',
+            'context': ctx,
+        }
+    
+    def _compute_file_welcome_email(self):
+        pdf = self.env.ref('sat_companies_sale_suscription.template_email_welcome').render_qweb_pdf(self.ids)
+        b64_pdf = base64.b64encode(pdf[0])
+
+
+    @api.depends('check_signature')
+    def action_get_attachment(self):
+        for record in self:
+            if record.check_signature == True:
+                pdf = self.env.ref('sat_companies_sale_suscription.template_email_welcome')._render_qweb_pdf(self.ids)
+                print(pdf)
+                b64_pdf = base64.b64encode(pdf[0])
+                record.pdf_file_welcome = b64_pdf
+                if record.order_line:
+                    for line in record.order_line:
+                        line.subscription_id.pdf_file_sale_contract = record.pdf_file_welcome
+            else:
+                record.pdf_file_welcome = False
+    
 
     def button_rejected_stage(self):
         rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '1')], limit=1)
