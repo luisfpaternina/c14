@@ -28,17 +28,6 @@ class SaleOrder(models.Model):
         related="sale_type_id.is_mounting")
     
 
-    @api.constrains(
-        'is_mounting',
-        'sale_type_id',
-        'is_forecast_made')
-    def _validate_mounting(self):
-        for record in self:
-            if record.is_mounting and record.is_forecast_made == False and record.state == 'draft':
-                raise ValidationError(_(
-                    'For this type of budget, a forecast must be made by the technical manager'))
-
-
     def get_task_sale_type(self):
         for record in self:
             if record.sale_order_template_id:

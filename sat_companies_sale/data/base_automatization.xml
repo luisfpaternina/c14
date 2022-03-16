@@ -23,7 +23,6 @@
         <field name="filter_domain">["|",["medium_id.name","=","Website"],["medium_id.name","=","Email"]]</field>
     </record>
 
-    
     <record id="automatization_sat_companies_crm_lead_max_days" model="base.automation">
         <field name="name">Notificación responsable del departamento</field>
         <field name="model_id" ref="crm.model_crm_lead"/>
@@ -41,6 +40,7 @@
         <field name="trigger">on_write</field>
         <field name="active" eval="True"/>
         <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="filter_pre_domain">[["is_mounting","=",True]]</field>
         <field name="filter_domain">[["state","=","sale"]]</field>
         <field name="activity_summary">Realizar previsión</field>
         <field name="activity_user_id" ref="base.user_admin"/>

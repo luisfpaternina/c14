@@ -29,7 +29,7 @@ LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DEREC
 
 Identificación del Responsable.
 
-Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} conNIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.
+Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} con NIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.
 
 Finalidad.
 
@@ -79,7 +79,7 @@ COMUNIDAD DE PROPIETARIOS
 
  
 
-Dn./a, {object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.
+{object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.
 
 Firmado. 
                  ]]>
