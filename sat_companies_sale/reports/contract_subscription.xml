@@ -64,7 +64,7 @@
         </template>
 
         <report
-                id="report_custom_template_subscription_contract"
+                id="id_template_subscription_contract"
                 string="Contrato de mantenimiento"
                 model="sale.subscription"
                 report_type="qweb-pdf"
