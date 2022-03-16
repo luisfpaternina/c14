@@ -4,9 +4,12 @@ class WizardQrMobileScanner(models.TransientModel):
     _name = 'wizard.qr.mobile.scanner'
 
     name = fields.Char('')
-    qr_scanner = fields.Char('Qr Scanner')
-    check_qr_active = fields.Boolean('Check Qr')
-    scanner = fields.Char(string="Scanner")
+    qr_scanner = fields.Char(
+        'Qr Scanner')
+    check_qr_active = fields.Boolean(
+        'Check Qr')
+    scanner = fields.Char(
+        string="Scanner")
     
     @api.onchange('qr_scanner')
     def _onchange_qr_scanner(self):

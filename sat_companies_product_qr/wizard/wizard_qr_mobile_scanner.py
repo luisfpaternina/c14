@@ -4,11 +4,16 @@ from odoo import models, fields, api
 class WizardQrMobileScannerInherit(models.TransientModel):
     _inherit = 'wizard.qr.mobile.scanner'
 
-    id_product_qr_generator = fields.Integer('Id product qr')
-    qr_pit = fields.Boolean('Qr Scanner Pit')
-    qr_machine = fields.Boolean('Qr Scanner Machine')
-    qr_cabine = fields.Boolean('Qr Scanner Cabine')
-    check_from_product_qr = fields.Boolean('check from product qr')
+    id_product_qr_generator = fields.Integer(
+        'Id product qr')
+    qr_pit = fields.Boolean(
+        'Qr Scanner Pit')
+    qr_machine = fields.Boolean(
+        'Qr Scanner Machine')
+    qr_cabine = fields.Boolean(
+        'Qr Scanner Cabine')
+    check_from_product_qr = fields.Boolean(
+        'check from product qr')
 
     @api.onchange('qr_scanner')
     def check_from_qr(self):
