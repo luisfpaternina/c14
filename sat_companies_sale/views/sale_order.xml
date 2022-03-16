@@ -29,7 +29,7 @@
                         type="object"
                         class="oe_highlight"
                         string="Send Contrat to signature"
-                        attrs="{'invisible': ['|',('contract_send', '=', True),('state', '!=', 'sale')]}"/>
+                        attrs="{'invisible': ['|',('state', 'in' , ['draft','sent','done','cancel']),('is_maintenance', '=', False)]}"/>
                 <button name="action_send_email" string="Send contract suspension" type="object" invisible="1"/>
             </xpath>
 
