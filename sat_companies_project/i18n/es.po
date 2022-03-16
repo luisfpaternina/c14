@@ -567,7 +567,7 @@ msgstr "Líneas de orden"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
 msgid "Other"
-msgstr ""
+msgstr "Otro"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__payment_term_ot_id
