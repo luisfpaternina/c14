@@ -83,6 +83,9 @@ class SaleSuscriptionInherit(models.Model):
         compute="action_get_attachment")
     signature_url_text = fields.Text(
         string="Signature URL")
+    stage_code = fields.Char(
+        string="Code",
+        related="stage_id.stage_code")
     
 
     def action_welcome_email_send(self):

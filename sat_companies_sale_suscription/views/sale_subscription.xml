@@ -33,8 +33,9 @@
                         <field name="is_suspension_stage" invisible="1"/>
                         <field name="recurring_rule_boundary" invisible="1"/>
                         <field name="document_ids" widget="many2many_binary" invisible="1"/>
-                        <field name="check_signature"/>
+                        <field name="check_signature" invisible="1"/>
                         <field name="pdf_file_welcome"/>
+                        <field name="stage_code" invisible="1"/>
                     </group>
 
                 </group>
@@ -73,7 +74,12 @@
             -->
 
             <xpath expr="//header" position="inside">
-                <button string="Discontinued" name="button_rejected_stage" type="object" class="btn-primary"/>
+                <button 
+                string="Discontinued"
+                name="button_rejected_stage"
+                type="object"
+                class="btn-primary"
+                attrs="{'invisible': [('stage_code', '=', '1')]}"/>
             </xpath>
 
         </field>
