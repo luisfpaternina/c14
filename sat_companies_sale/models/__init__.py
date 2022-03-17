@@ -9,4 +9,4 @@ from . import sale_check_type_contract
 from . import sale_order_line
 from . import res_partner
 from . import crm_stage
-#from . import account_move
+from . import crm_lead_tracing

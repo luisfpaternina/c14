@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 15:26+0000\n"
-"PO-Revision-Date: 2022-02-28 15:26+0000\n"
+"POT-Creation-Date: 2022-03-17 16:33+0000\n"
+"PO-Revision-Date: 2022-03-17 16:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,17 +41,19 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model:mail.template,report_name:sat_companies_sale.email_contract_signature
+#: model:mail.template,report_name:sat_companies_sale.pdf_attachment_signatured
 msgid "${(object.name or '').replace('/','_')}"
 msgstr ""
 
 #. module: sat_companies_sale
 #: model:mail.template,subject:sat_companies_sale.email_contract_signature
+#: model:mail.template,subject:sat_companies_sale.pdf_attachment_signatured
 msgid "${object.company_id.name}"
 msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.actions.report,print_report_name:sat_companies_sale.action_email_contract_signature
-msgid "'Test Contrato - %s' % (object.name)"
+msgid "'Contrato - %s' % (object.name)"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -154,6 +156,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
 msgid ""
 "<br/>\n"
 "                          <strong><span>Con dominio en:</span></strong><span> </span>"
@@ -161,6 +164,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
 msgid ""
 "<br/>\n"
 "                          <strong><span>y con N.I.F:</span></strong><span> </span>"
@@ -168,6 +172,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
 msgid ""
 "<br/>\n"
 "                          <strong><span>y de otra:</span></strong><span> </span><span/><br/>\n"
@@ -212,6 +217,22 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.pdf_attachment_signatured
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        <br/>\n"
+"                        <div style=\"margin:16px 0px 16px 0px;\">\n"
+"                                <a href=\"/contract/${object.id}\" style=\"background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                    Archivo Adjunto\n"
+"                                </a>\n"
+"                        </div>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
 msgid ""
 "<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
@@ -231,6 +252,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
 msgid "<strong><span>De una parte:</span></strong><span> </span>"
 msgstr ""
 
@@ -248,6 +270,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
 msgid "<strong>CONTRATO DE MANTENIMIENTO T - R</strong>"
 msgstr ""
 
@@ -434,6 +457,7 @@ msgid "Accionamiento:"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_needaction
 msgid "Action Needed"
@@ -495,6 +519,7 @@ msgid "Assignment date"
 msgstr "Fecha de asignación"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_attachment_count
 msgid "Attachment Count"
@@ -627,11 +652,6 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: sat_companies_sale
-#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
-msgid "Contract"
-msgstr "Contrato"
-
-#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__contract_send
 msgid "Contract Send"
 msgstr "Contrato enviado"
@@ -643,7 +663,7 @@ msgstr "Tipo de contrato"
 
 #. module: sat_companies_sale
 #: model:ir.actions.report,name:sat_companies_sale.id_report_custom_template_sale_contract
-#: model:ir.actions.report,name:sat_companies_sale.report_custom_template_subscription_contract
+#: model:ir.actions.report,name:sat_companies_sale.id_template_subscription_contract
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
 msgid "Contrato de mantenimiento"
@@ -671,6 +691,7 @@ msgid "Create task"
 msgstr "Crear tarea"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__create_uid
@@ -678,6 +699,7 @@ msgid "Created by"
 msgstr "Creado por"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__create_date
@@ -703,6 +725,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
 msgid "Data URL for your signature will go here!"
 msgstr "La URL de datos de su firma irá aquí"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__date
+msgid "Date"
+msgstr "Fecha"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__date_begin
@@ -750,12 +777,14 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__description
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__type_description
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__display_name
@@ -887,18 +916,21 @@ msgid "Firma"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_follower_ids
 msgid "Followers"
 msgstr "Segidores"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_channel_ids
 msgid "Followers (Channels)"
 msgstr "Seguidores (Canales)"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_partner_ids
 msgid "Followers (Partners)"
@@ -936,6 +968,7 @@ msgstr "Obtén un mejor navegador"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__id
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__id
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage__id
 #: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__id
@@ -950,6 +983,8 @@ msgid "ID"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_unread
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_needaction
@@ -958,12 +993,19 @@ msgid "If checked, new messages require your attention."
 msgstr "Si está marcada, los mensajes nuevos requieren su atención."
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_error
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: sat_companies_sale
+#: model:ir.ui.menu,name:sat_companies_sale.menu_sale_type_service
+msgid "Información Contrato"
+msgstr "Información contrato"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__int_opportunity_days
@@ -982,6 +1024,7 @@ msgid "Is Admin"
 msgstr "Es administrador"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_is_follower
 msgid "Is Follower"
@@ -1002,6 +1045,21 @@ msgstr "Es externo"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__check_is_gadget
 msgid "Is gadget"
 msgstr "Es un aparato"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_line
+msgid "Is line"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_maintenance
+msgid "Is maintenance"
+msgstr "Mantenimiento"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_mounting
+msgid "Is mounting"
+msgstr "Montaje"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__item
@@ -1034,6 +1092,7 @@ msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner____last_update
@@ -1048,6 +1107,7 @@ msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__write_uid
@@ -1055,11 +1115,17 @@ msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__lead_id
+msgid "Lead"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model:ir.model,name:sat_companies_sale.model_crm_lead
@@ -1077,6 +1143,7 @@ msgid "Localidad donde se firma"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_main_attachment_id
 msgid "Main Attachment"
@@ -1146,12 +1213,14 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_error
 msgid "Message Delivery error"
 msgstr "Mensajes de error"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_ids
 msgid "Messages"
@@ -1178,9 +1247,11 @@ msgid "Muy Sres. nuestros:"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__name
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__name
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_type_service_form
 msgid "Name"
 msgstr "Nombre"
 
@@ -1193,6 +1264,11 @@ msgstr "Nombre tipo de oportunidad"
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__neighborhood_community
 msgid "Neighborhood community"
 msgstr "Comunidad de vecinos"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__next_date
+msgid "Next Date"
+msgstr "Próx. Contacto"
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
@@ -1234,30 +1310,35 @@ msgid "Notificación responsable del departamento"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_needaction_counter
 msgid "Number of Actions"
 msgstr "Número de acciones"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_error_counter
 msgid "Number of errors"
 msgstr "Número de errores"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr "Número de mensajes cuales requieren una atención"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_unread_counter
 msgid "Number of unread messages"
@@ -1335,6 +1416,21 @@ msgid "Orden de domiciliación de <strong>DEBITO DIRECTO SEPA</strong>"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_other
+msgid "Other"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_pdf_true
+msgid "PDF True"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__pdf_description
+msgid "PDF description"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Pago trimestral Actual…………………………………………………………………………………."
 msgstr ""
@@ -1397,6 +1493,12 @@ msgstr "Presidente"
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Presidente"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:base.automation,name:sat_companies_sale.automatization_sat_companies_sale_prevision
+#: model:ir.actions.server,name:sat_companies_sale.automatization_sat_companies_sale_prevision_ir_actions_server
+msgid "Previsión"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -1509,6 +1611,7 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_sms_error
 msgid "SMS Delivery error"
@@ -1681,6 +1784,11 @@ msgid "Tipo de pago"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Tipos de Servicios en Contrato"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Tlf.* ……………………………………………… Email……………………………………………………"
 msgstr ""
@@ -1691,8 +1799,14 @@ msgid "Tlf.…………………………………………… Email*………�
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_lead_tracing
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__tracing_ids
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.inherit_view_crm_lead_sat_companies
+msgid "Tracing"
+msgstr "Seguimiento"
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__type_service_id
-#: model:ir.ui.menu,name:sat_companies_sale.menu_sale_type_service
 msgid "Type Service"
 msgstr "Información contrato"
 
@@ -1706,6 +1820,12 @@ msgstr "Tipo de contrato"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__type_service_id
 msgid "Type service"
 msgstr "Información contrato"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__udn_id
+msgid "Udn"
+msgstr ""
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
@@ -1730,12 +1850,14 @@ msgid "Unidades:______________   Tipo:_____"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_unread
 msgid "Unread Messages"
 msgstr "Mensajes no leídos"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_unread_counter
 msgid "Unread Messages Counter"
@@ -1757,12 +1879,14 @@ msgid "Velocidad:"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__website_message_ids
 msgid "Website Messages"
 msgstr "Mnesajes del website"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__website_message_ids
 #: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__website_message_ids
 #: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__website_message_ids
 msgid "Website communication history"

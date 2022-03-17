@@ -67,7 +67,7 @@
                         <br/>
                         <div style="margin:16px 0px 16px 0px;">
                                 <a href="/welcome/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
-                                    welcome contract
+                                    Signature
                                 </a>
                         </div>
                     </p>
@@ -77,7 +77,7 @@
             <field name="lang">${object.partner_id.lang}</field>
             <field name="auto_delete" eval="True"/>
         </record>
-        <record id="pdf_attachment_signatured" model="mail.template">
+        <record id="pdf_attachment_signatured_wel" model="mail.template">
             <field name="name">pdf attachment</field>
             <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
             <field name="subject">${object.company_id.name}</field>
