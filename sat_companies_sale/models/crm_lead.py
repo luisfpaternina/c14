@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import datetime, date
@@ -51,6 +52,22 @@ class CrmLead(models.Model):
         string="Int stage days")
     is_validate_days = fields.Boolean(
         string="Validate days")
+    udn_type_id = fields.Many2one(
+        'project.task.categ.udn',
+        string="Udn")
+    tracing_ids = fields.One2many(
+        'crm.lead.tracing',
+        'lead_id',
+        string="Tracing")
+    
+
+    @api.onchange('sale_type_id')
+    def domain_saletype_udn(self):
+        for record in self:
+            if record.sale_type_id:
+                return {'domain': {'udn_type_id': [('ot_type_id', '=', record.sale_type_id.id)]}}
+            else:
+                return {'domain': {'udn_type_id': []}}
 
 
     @api.onchange(
