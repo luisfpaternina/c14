@@ -18,7 +18,7 @@
         <field name="trigger">on_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_extension"/>
-        <field name="filter_pre_domain">[["stage_id","ilike","En progreso"]]</field>
+        <field name="filter_pre_domain">[["stage_id.stage_code","=","2"]]</field>
         <field name="filter_domain">[["is_extension","=",True]]</field>
     </record>
 
@@ -54,8 +54,8 @@
         <field name="trigger">on_create_or_write</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_email_fired_template"/>
-        <field name="filter_pre_domain">[["stage_id.id","=",3]]</field>
-        <field name="filter_domain">[["stage_id.id","=",3]]</field>
+        <field name="filter_pre_domain">[["stage_id.stage_code","=","5"]]</field>
+        <field name="filter_domain">[["stage_id.stage_code","=","5"]]</field>
     </record>
 
     <record id="automatization_welcome_mto_subscription" model="base.automation">
@@ -76,8 +76,8 @@
         <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
         <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_template"/>
-        <field name="filter_pre_domain">[["pdf_file_sale_contract","!=",False]]</field>
-        <field name="filter_domain">[["pdf_file_sale_contract","!=",False]]</field>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
     </record>
 
 </odoo>
