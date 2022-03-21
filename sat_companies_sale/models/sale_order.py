@@ -80,6 +80,11 @@ class SaleOrder(models.Model):
         string="Other")
     is_mounting = fields.Boolean(
         string="Is mounting")
+    is_normative = fields.Boolean(
+        string="Normative",
+        related="udn_id.is_normative")
+    normative_date = fields.Date(
+        string="Normative date")
 
 
     @api.onchange('sale_type_id')

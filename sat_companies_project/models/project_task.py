@@ -106,6 +106,9 @@ class ProjectTaskInherit(models.Model):
         'stock.picking',
         'stock_picking_rel',
         string="Picking")
+    is_maintenance = fields.Boolean(
+        string="Is maintenance",
+        related="ot_type_id.is_maintenance")
 
 
     @api.onchange('partner_id','ot_type_id')

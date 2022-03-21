@@ -7,8 +7,7 @@
             <t t-call="website.layout">
                 <main>
                     <div class="container text-center" hidden="True">
-                        <p>REF QUOTATION <span t-esc="name"/></p>
-                        <p id="id_value_sale" t-esc="id_value"/>
+                        <p>REF</p>
                     </div>
                     <div class="alert alert-success" role="alert" id="alertSignatureSent" hidden="True">
                       <h4 class="alert-heading">Well done!</h4>

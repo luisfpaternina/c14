@@ -10,7 +10,8 @@
                 <tree editable="bottom">
                     <field name="code" required="1"/>
                     <field name="name" required="1"/>
-                        <field name="ot_type_id"/>
+                    <field name="is_normative"/>
+                    <field name="ot_type_id"/>
                 </tree>
             </field>
         </record>

@@ -17,7 +17,7 @@
                     <t t-call="web.external_layout">
                         <div class="page">
                             <h2>Report title</h2>
-                            <p>Suscripción<span t-field="o.name"/></p>
+                            <p>Suscripción</p>
                         </div>
                         <div>
                         <!--
@@ -46,24 +46,11 @@
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        % set doc_name = 'quotation' if object.state in ('draft', 'sent') else 'order'
+                        
                         <br/><br/>
-                        Your
-                        % if ctx.get('proforma'):
-                            Pro forma invoice for ${doc_name} <strong>${object.name}</strong>
-                            % if object.origin:
-                                (with reference: ${object.origin} )
-                            % endif
-                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is available.
-                        % else:
-                            ${doc_name} <strong>${object.name}</strong>
-                            % if object.origin:
-                                (with reference: ${object.origin} )
-                            % endif
-                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is ready for review.
-                        % endif
+                       
                         <br/><br/>
-                        Do not hesitate to contact us if you have any questions.
+                        
                         <br/>
                         <div style="margin:16px 0px 16px 0px;">
                                 <a href="/welcome/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">

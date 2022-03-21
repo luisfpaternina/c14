@@ -24,9 +24,21 @@ class SaleOrder(models.Model):
         string="Is maintenance",
         related="sale_type_id.is_maintenance")
     is_mounting = fields.Boolean(
-        string="Is mounting",
-        related="sale_type_id.is_mounting")
+        string="Is mounting")
+    is_normative = fields.Boolean(
+        string="Normative",
+        related="udn_id.is_normative")
+    normative_date = fields.Date(
+        string="Normative date")
     
+
+    @api.onchange(
+        'sale_order_type',
+        'udn_id')
+    def onchange_so_type(self):
+        if self.sale_type_id:
+            self.is_mounting = self.sale_type_id.is_mounting
+
 
     def get_task_sale_type(self):
         for record in self:
