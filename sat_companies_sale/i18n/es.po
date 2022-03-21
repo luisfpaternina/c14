@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 16:33+0000\n"
-"PO-Revision-Date: 2022-03-17 16:33+0000\n"
+"POT-Creation-Date: 2022-03-21 12:28+0000\n"
+"PO-Revision-Date: 2022-03-21 12:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1290,6 +1290,16 @@ msgstr "Velicidad Nominal(m/s)"
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_subscription__type_contract__normal
 msgid "Normal"
 msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_normative
+msgid "Normative"
+msgstr "Normativa"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__normative_date
+msgid "Normative date"
+msgstr "Fecha cumplimiento normativa"
 
 #. module: sat_companies_sale
 #: model:base.automation,name:sat_companies_sale.automatization_sat_companies_crm_lead_opportunity_notification

@@ -121,6 +121,11 @@ class ProjectTask(models.Model):
     rae = fields.Char(
         string="R.A.E",
         related="product_id.rae")
+    ot_type_id = fields.Many2one(
+        'sale.order.type',
+        string="OT type")
+    is_maintenance = fields.Boolean(
+        string="Is maintenance")
 
 
     @api.onchange('ot_type_id')

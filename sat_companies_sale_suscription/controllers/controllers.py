@@ -13,10 +13,7 @@ class SuscriptionController(http.Controller):
     def redirect_contract_report(self, sale_subscription):
         qr_product_form = request.env['sale.subscription'].sudo().search([('id','=',sale_subscription.id)])
         return http.request.render('sat_companies_sale_suscription.welcome_subscription_report',{
-            'sale_object': sale_subscription,
-            'name': sale_subscription.name,
-            'pdf_file': sale_subscription.pdf_file_welcome,
-            'id_value': sale_subscription.id
+            'sale_object': sale_subscription
         })
 
 
@@ -43,7 +40,7 @@ class SuscriptionController(http.Controller):
         return(s)
 
 
-    @http.route(['/send_sale'], type='json', auth='public', website=True)
+    @http.route(['/send_sale_subscription'], type='json', auth='public', website=True)
     def send_sale_subscription_data(self, url_signature = None, id_sale_subscription=None):
         if id_sale_subscription and url_signature:
             id_sale_subscription = int(id_sale_subscription)

@@ -19,6 +19,8 @@ class ProjectTaskCategUdn(models.Model):
     ot_type_id = fields.Many2one(
         'sale.order.type',
         string="OT type")
+    is_normative = fields.Boolean(
+        string="Normative")
     
 
     @api.onchange('name','code')
