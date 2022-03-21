@@ -56,7 +56,8 @@ class WizardSaleOrderType(models.TransientModel):
                     #'sale_line_id':record.sale_order_id.id,
                     'planned_date_begin': record.sale_order_id.date_begin,
                     'planned_date_end': record.sale_order_id.date_end,
-                    'is_fsm': True
+                    'is_fsm': True,
+                    'categ_udn_id': record.sale_order_id.udn_id.id
                     
                 })
             

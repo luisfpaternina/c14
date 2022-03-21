@@ -54,7 +54,3 @@ class SaleOrder(models.Model):
             self.write({'revision_number': revno + 1,'name': '%s-%02d' % (self.unrevisioned_name,revno + 1)})
             defaults.update({'name': prev_name,'revision_number': revno,'revised':True,'active': True,'state': 'cancel','current_revision_id': self.id,'unrevisioned_name': self.unrevisioned_name,})
         return super(SaleOrder, self).copy(defaults)
-
-
-
-
