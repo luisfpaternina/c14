@@ -51,7 +51,7 @@
         'data/send_email_max_days.xml',
         'data/contract_suspension.xml',
         'data/base_automatization.xml',
-        'data/sale.type.service.csv',
+        #'data/sale.type.service.csv',
         
     ],
     'installable': True
