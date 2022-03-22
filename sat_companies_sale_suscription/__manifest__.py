@@ -26,7 +26,7 @@
 
         'security/security.xml',
         'security/ir.model.access.csv',
-        'data/stock.gadgets.contract.type.csv',
+        #'data/stock.gadgets.contract.type.csv',
         'data/subscription.reason.change.csv',
         'data/subscription.inspection.report.csv',
         'data/subscription.process.csv',
