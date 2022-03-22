@@ -529,14 +529,6 @@ class ProductTemplate(models.Model):
                 record.qr_machine_image = False
 
 
-    @api.constrains('start_date_contract','end_date_contract')
-    def validate_contracs_dates(self):
-        if self.start_date_contract and self.end_date_contract:
-            if self.start_date_contract > self.end_date_contract:
-                raise ValidationError(_(
-                    'The contract start date cannot be greater than the end date'))
-
-
     @api.onchange('gadget_model')
     def _upper_gadget_model(self):        
         self.gadget_model = self.gadget_model.upper() if self.gadget_model else False
