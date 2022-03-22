@@ -18,12 +18,23 @@
                             <style>
                                
                             </style>
+                            <table>
+                                <tr>
+                                    <td>FECHA:</td>
+                                    <td>N°</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                     <div class="footer">
-                        <p align="center">
-                           
-                        </p>
+                        <div class="text-right" style="border-top: 1px solid black;">
+                            <ul class="list-inline">
+                                <li>Page:</li>
+                                <li><span class="page"/></li>
+                                <li>/</li>
+                                <li><span class="topage"/></li>
+                            </ul>
+                        </div>
                     </div>
                 </t>
             </t>
