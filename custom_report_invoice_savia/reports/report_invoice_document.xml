@@ -10,9 +10,9 @@
             </p>
         </xpath>
         <xpath expr="//table[@name='invoice_line_table']/tbody/t[@t-foreach='lines']" position="before">
-            <t t-if="o.x_certificacion">
+            <t t-if="o.bim_masive_certification_ids">
             <t t-set="iterador" t-value="1"/>
-            <t t-foreach="o.x_certificacion" t-as="certificacion">
+            <t t-foreach="o.bim_masive_certification_ids" t-as="certificacion">
                 <t t-if="certificacion.budget_id">
                     <tr>
                         <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6"><b>Presupuesto Nº:<span t-esc="certificacion.budget_id.id"/></b></td>
