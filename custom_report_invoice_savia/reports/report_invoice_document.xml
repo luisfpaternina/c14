@@ -20,7 +20,7 @@
                 </t>
                 <t t-set="total" t-value="0"/>    
                 <tr>
-                    <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6">Certificación Nº:<span t-esc="iterador"/></td>
+                    <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6">Certificación Masiva Nº:<span t-esc="iterador"/></td>
                 </tr>
                 <t t-set="iterador" t-value="iterador+1"/>
                 <tr>
@@ -81,7 +81,7 @@
                 </t>
                 <t t-set="total" t-value="0"/>    
                 <tr>
-                    <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6">Certificación Nº:<span t-esc="iterador"/></td>
+                    <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6">Certificación Capítulo Nº:<span t-esc="iterador"/></td>
                 </tr>
                 <t t-set="iterador" t-value="iterador+1"/>
                 <tr>
