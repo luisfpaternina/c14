@@ -8,9 +8,9 @@
 
             <xpath expr="//form[1]/sheet[1]/group[1]/group[2]/field[@name='budget_id']" position="after">
                 <field name="bim_masive_certification_ids" widget="many2many_tags"/>
-                <field name="bim_masive_chapter_id" widget="many2many_tags"/>
+                <field name="bim_masive_chapter_ids" widget="many2many_tags"/>
             </xpath>
-            
+
         </field>
     </record>
 </odoo>    
