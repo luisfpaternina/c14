@@ -14,6 +14,7 @@
     ],
     'data': [
         'data/paperformat.xml',
+        'views/account_move.xml',
         'reports/report_invoice_document.xml',
     ],
 }
