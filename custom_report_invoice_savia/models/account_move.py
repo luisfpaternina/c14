@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, _
 
 
 class AccountMove(models.Model):
@@ -13,6 +13,14 @@ class AccountMove(models.Model):
         comodel_name='bim.paidstate',
         compute='_compute_paidstate_by_bim_project_ids',
         string='Estado de Pago por Obra',
+    )
+    bim_masive_certification_ids = fields.Many2many(
+        comodel_name='bim.masive.certification.by.line',
+        string='Certificación masiva',
+    )
+    bim_masive_chapter_ids = fields.Many2many(
+        comodel_name='bim.massive.chapter.certification',
+        string='Certificación capítulo',
     )
 
     @api.depends('paidtate_ids')
