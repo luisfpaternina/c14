@@ -16,10 +16,12 @@ class AccountMove(models.Model):
     )
     bim_masive_certification_ids = fields.Many2many(
         comodel_name='bim.masive.certification.by.line',
+        'account_move_bim_massive_certification_by_line_rel',
         string='Certificación masiva',
     )
     bim_masive_chapter_ids = fields.Many2many(
         comodel_name='bim.massive.chapter.certification',
+        'account_move_bim_massive_chapter_rel',
         string='Certificación capítulo',
     )
 
