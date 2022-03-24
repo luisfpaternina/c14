@@ -70,6 +70,67 @@
             </t>
         </xpath>
 
+        <xpath expr="//table[@name='invoice_line_table']/tbody/t[@t-foreach='lines']" position="before">
+            <t t-if="o.bim_masive_chapter_ids">
+            <t t-set="iterador" t-value="1"/>
+            <t t-foreach="o.bim_masive_chapter_ids" t-as="certificacion">
+                <t t-if="certificacion.budget_id">
+                    <tr>
+                        <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6"><b>Presupuesto Nº:<span t-esc="certificacion.budget_id.id"/></b></td>
+                    </tr>
+                </t>
+                <t t-set="total" t-value="0"/>    
+                <tr>
+                    <td style="background-color:rgba(0, 0, 0, 0.1);" colspan="6">Certificación Nº:<span t-esc="iterador"/></td>
+                </tr>
+                <t t-set="iterador" t-value="iterador+1"/>
+                <tr>
+                    <td colspan="6"><centre><span t-esc="certificacion.note"/></centre></td>
+                </tr>
+                <t t-foreach="certificacion.certification_stage_ids" t-as="stage">
+                    <t t-if="stage">
+                    <tr>
+                        <td style="text-align: justify !important;page-break-before: avoid !important;">
+                            <span t-esc="stage.concept_id.note"/>
+                        </td>
+                        <td style="text-align: right !important;">
+                            <span t-esc="stage.concept_id.quantity"/>
+                            <span t-esc="stage.concept_id.uom_id.name"/>
+                        </td>
+                        <td/>
+                        <td style="text-align: right !important;">
+                            <span t-esc="stage.concept_id.amount_compute"/>
+                        </td>
+                        <td/>
+                        <td style="text-align: right !important;">
+                            <span t-esc="stage.concept_id.balance" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                        </td>
+                    </tr>
+                    </t>
+                    <t t-set="total" t-value="total+stage.amount_certif"/>
+                </t>
+                <tr>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                </tr>
+                <tr>
+                    <td><b>TOTAL</b></td>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td/>
+                    <td style="background-color: rgba(0, 0, 0, 0.1);">
+                        <span t-esc="total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                    </td>
+                </tr>
+            </t>
+            </t>
+        </xpath>
+
         <xpath expr="//span[@t-field='o.invoice_payment_term_id.note']" position="before">
             <b>
                 FORMA DE PAGO:
