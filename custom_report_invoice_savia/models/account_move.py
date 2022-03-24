@@ -15,11 +15,11 @@ class AccountMove(models.Model):
         string='Estado de Pago por Obra',
     )
     bim_masive_certification_ids = fields.Many2many(
-        comodel_name='bim.masive.certification.by.line',
+        'bim.masive.certification.by.line',
         string='Certificación masiva',
     )
     bim_masive_chapter_ids = fields.Many2many(
-        comodel_name='bim.massive.chapter.certification',
+        'bim.massive.chapter.certification',
         string='Certificación capítulo',
     )
 
