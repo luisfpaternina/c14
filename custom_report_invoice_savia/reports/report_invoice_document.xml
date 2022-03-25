@@ -70,7 +70,7 @@
             </t>
         </xpath>
 
-        <xpath expr="//table[@name='invoice_line_table']/tbody/t[@t-foreach='lines']" position="before">
+         <xpath expr="//table[@name='invoice_line_table']/tbody/t[@t-foreach='lines']" position="before">
             <t t-if="o.bim_masive_chapter_ids">
             <t t-set="iterador" t-value="1"/>
             <t t-foreach="o.bim_masive_chapter_ids" t-as="certificacion">
@@ -88,26 +88,28 @@
                     <td colspan="6"><centre><span t-esc="certificacion.note"/></centre></td>
                 </tr>
                 <t t-foreach="certificacion.certification_stage_ids" t-as="stage">
+                  <t t-foreach="stage.concept_ids" t-as="cp">
                     <t t-if="stage">
                     <tr>
                         <td style="text-align: justify !important;page-break-before: avoid !important;">
-                            <span t-esc="stage.concept_id.note"/>
+                            <span t-esc="cp.code"/>
                         </td>
                         <td style="text-align: right !important;">
-                            <span t-esc="stage.concept_id.quantity"/>
-                            <span t-esc="stage.concept_id.uom_id.name"/>
-                        </td>
-                        <td/>
-                        <td style="text-align: right !important;">
-                            <span t-esc="stage.concept_id.amount_compute"/>
+                            <span t-esc="cp.quantity"/>
+                            <span t-esc="cp.uom_id.name"/>
                         </td>
                         <td/>
                         <td style="text-align: right !important;">
-                            <span t-esc="stage.concept_id.balance" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                            <span t-esc="cp.amount_compute"/>
+                        </td>
+                        <td/>
+                        <td style="text-align: right !important;">
+                            <span t-esc="cp.balance" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
                         </td>
                     </tr>
                     </t>
                     <t t-set="total" t-value="total+stage.amount_certif"/>
+                    </t>
                 </t>
                 <tr>
                     <td/>
