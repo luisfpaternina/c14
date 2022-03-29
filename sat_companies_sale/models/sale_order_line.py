@@ -9,30 +9,22 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order.line'
 
     rae = fields.Char(
-        string="R.A.E.",
-        tracking=True)
-
+        string="R.A.E.")
     ref = fields.Char(
-        string="Reference",
-        tracking=True)
-
+        string="Reference")
     maneuver = fields.Char(
         string="Maneuver")
-    
     elevator_type_id = fields.Many2one(
         'stock.elevator.type',
         string="Elevator type")
-
     people_numbers = fields.Char(
         string="People numbers")
-
     gadget_load = fields.Char(
         string="Load(Kgs)")
-
     nominal_speed = fields.Char(
         string="Nominal speed(m/s)")
-
-    check_is_gadget = fields.Boolean(related='product_id.is_gadget')
+    check_is_gadget = fields.Boolean(
+        related='product_id.is_gadget')
 
 
     @api.onchange('product_id')
