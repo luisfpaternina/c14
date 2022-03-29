@@ -7,69 +7,48 @@ class HrEmployeePublic(models.Model):
 
     delegation_id = fields.Many2one(
         'res.partner.delegation',
-        string="Delegation",
-        tracking=True)
+        string="Delegation")
     delegation_code = fields.Char(
-        string="Code",
-        tracking=True)
+        string="Code")
     c_accountant = fields.Char(
-        string="C.Accountant",
-        tracking=True)
+        string="C.Accountant")
     account_id = fields.Many2one(
         'account.account',
-        string="C.Accountant",
-        tracking=True)
+        string="C.Accountant")
     alarm_code = fields.Char(
-        string="Alarm code",
-        tracking=True)
+        string="Alarm code")
     shirt_size = fields.Char(
-        string="Shirt size",
-        tracking=True)
+        string="Shirt size")
     shoe_size = fields.Char(
-        string="Shoe size",
-        tracking=True)
+        string="Shoe size")
     jersey_size = fields.Char(
-        string="Jersey size",
-        tracking=True)
+        string="Jersey size")
     parka_size = fields.Char(
-        string="Parka size",
-        tracking=True)
+        string="Parka size")
     jacket_size = fields.Char(
-        string="Jacket size",
-        tracking=True)
+        string="Jacket size")
     pants_size = fields.Char(
-        string="Pants size",
-        tracking=True)
+        string="Pants size")
     polo_size = fields.Char(
-        string="Polo size",
-        tracking=True)
+        string="Polo size")
     raincoat_size = fields.Char(
-        string="Raincoat size",
-        tracking=True)
+        string="Raincoat size")
     pda = fields.Boolean(
-        string="PDA",
-        tracking=True)
+        string="PDA")
     online_service = fields.Boolean(
-        string="Online services",
-        tracking=True)
+        string="Online services")
     supervisor = fields.Boolean(
-        string="Supervisor",
-        tracking=True)
+        string="Supervisor")
     warehouse = fields.Char(
-        string="Warehouse",
-        tracking=True)
+        string="Warehouse")
     workwear = fields.Boolean(
-        string="Workwear",
-        tracking=True)
+        string="Workwear")
     password = fields.Char(
-        string="Password",
-        tracking=True)
+        string="Password")
     imei = fields.Char(
-        string="IMEI",
-        tracking=True)
+        string="IMEI")
     type_driving_license = fields.Char(
-        string="Type driving license",
-        tracking=True)
+        string="Type driving license")
     employee_type = fields.Many2one(
         'hr.employee.type',
         string="Employee type")
@@ -77,12 +56,10 @@ class HrEmployeePublic(models.Model):
         string="Is maintainer")
     category_id = fields.Many2one(
         'hr.employee.categories',
-        string="Employee category",
-        tracking=True)
+        string="Employee category")
     warehouse_id = fields.Many2one(
         'stock.warehouse',
-        string="Warehouse",
-        tracking=True)
+        string="Warehouse")
     code = fields.Char(
         string="Code", 
         tracking=True,
@@ -93,7 +70,7 @@ class HrEmployeePublic(models.Model):
     employee_notes = fields.Text(
         string="Notes")
 
-    
+
     @api.model
     def create(self, vals):
         if vals.get('code', 'New') == 'New':

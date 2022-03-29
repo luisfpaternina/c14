@@ -7,15 +7,21 @@ class ResUsers(models.Model):
 
     route_id = fields.Many2one(
         'res.partner.routes',
-        string="Normal route",
-        tracking=True)
+        string="Normal route")
     route_type_id = fields.Many2one(
         'res.partner.routes',
-        string="Guard route",
-        tracking=True)
-    product_ids = fields.Many2many('product.template', string="Gadgets")
-    zones_ids = fields.Many2many('res.partner.zones', compute="compute_zones_user", string="Zones")
-    routes_ids = fields.Many2many('res.partner.routes', compute="compute_routes_user",string="Routes")
+        string="Guard route")
+    product_ids = fields.Many2many(
+        'product.template',
+        string="Gadgets")
+    zones_ids = fields.Many2many(
+        'res.partner.zones',
+        compute="compute_zones_user",
+        string="Zones")
+    routes_ids = fields.Many2many(
+        'res.partner.routes',
+        compute="compute_routes_user",
+        string="Routes")
 
     def compute_products_user(self):
         product = self.env['product.template'].search([('user_id','=',self.id)])
@@ -55,4 +61,3 @@ class ResUsers(models.Model):
                     self.routes_ids = False
         else:
             self.routes_ids = False
-    

@@ -17,7 +17,7 @@ class ResPartnerZones(models.Model):
     country_id = fields.Many2one('res.country',
         string="Country",
         tracking=True)
-    user_id = fields.Many2one('res.user',
+    user_id = fields.Many2one('res.users',
         string="Responsable",
         tracking=True)
     employee_id = fields.Many2one(
