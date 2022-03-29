@@ -10,7 +10,7 @@ class SuscriptionInspectionReport(models.Model):
     name = fields.Char(
         string="Name")
     active = fields.Boolean(
-        String="Active",
+        string="Active",
         default=True)
 
 
