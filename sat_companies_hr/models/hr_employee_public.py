@@ -61,8 +61,7 @@ class HrEmployeePublic(models.Model):
         'stock.warehouse',
         string="Warehouse")
     code = fields.Char(
-        string="Code", 
-        tracking=True,
+        string="Code",
         readonly=True,
         required=True,
         copy=False,
