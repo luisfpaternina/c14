@@ -12,8 +12,7 @@ class PurchaseOrder(models.Model):
         tracking=True)
     is_validate_reception = fields.Boolean(
         string="Validate reception",
-        tracking=True,
-        compute="_compute_date_planned")
+        tracking=True)
     is_validator = fields.Boolean(
         string="Validate")
 
