@@ -14,7 +14,7 @@ class ProductQrGenerator(models.Model):
     name = fields.Char('')
     state = fields.Selection([
         ('checking','Checking'),
-        ('done','Done')],string="State", default='checking', tracking=True)
+        ('done','Done')],string="State", default='checking')
     delegation = fields.Many2one(
         'res.partner.delegation',
         string="Delegation")
@@ -48,14 +48,11 @@ class ProductQrGenerator(models.Model):
     qr_scanner = fields.Char(
         string='Pit')
     check_pit = fields.Boolean(
-        string='Pit',
-        tracking=True)
+        string='Pit')
     check_cabine = fields.Boolean(
-        string='Cabine',
-        tracking=True)
+        string='Cabine')
     check_machine = fields.Boolean(
-        string='Machine',
-        tracking=True)
+        string='Machine')
     qr_pit = fields.Binary(
         'Dowload Qr Image Pit',
         compute="_generate_qr_code")

@@ -4,5 +4,4 @@ class ResUsers(models.Model):
     _inherit = 'res.users'
 
     code = fields.Char(
-        string="Code",
-        tracking=True)
+        string="Code")
