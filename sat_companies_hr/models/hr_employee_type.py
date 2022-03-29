@@ -8,7 +8,7 @@ class HrEmployeeType(models.Model):
     _description = 'Employee type'
 
     name = fields.Char(
-        String="Employee's type",
+        string="Employee's type",
         tracking=True)
     code = fields.Char(
         string="Code",
