@@ -46,15 +46,15 @@ class ProductQrGenerator(models.Model):
         related="to_zone.name",
         string="Name")
     qr_scanner = fields.Char(
-        String='Pit')
+        string='Pit')
     check_pit = fields.Boolean(
-        String='Pit',
+        string='Pit',
         tracking=True)
     check_cabine = fields.Boolean(
-        String='Cabine',
+        string='Cabine',
         tracking=True)
     check_machine = fields.Boolean(
-        String='Machine',
+        string='Machine',
         tracking=True)
     qr_pit = fields.Binary(
         'Dowload Qr Image Pit',
