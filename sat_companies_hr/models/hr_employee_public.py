@@ -74,8 +74,7 @@ class HrEmployeePublic(models.Model):
         'hr.employee.type',
         string="Employee type")
     is_maintainer = fields.Boolean(
-        string="Is maintainer",
-        tracking=True)
+        string="Is maintainer")
     category_id = fields.Many2one(
         'hr.employee.categories',
         string="Employee category",
@@ -99,6 +98,6 @@ class HrEmployeePublic(models.Model):
     def create(self, vals):
         if vals.get('code', 'New') == 'New':
             vals['code'] = self.env['ir.sequence'].next_by_code('employee.code') or 'New'
-        result = super(HrEmployee, self).create(vals)
+        result = super(HrEmployeePublic, self).create(vals)
         return result
     
