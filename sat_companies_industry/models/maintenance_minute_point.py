@@ -9,7 +9,7 @@ class MaintenanceMinutePoint(models.Model):
     _rec_name = 'code'
 
     name = fields.Char(
-        String="Name",
+        string="Name",
         tracking=True)
     code = fields.Char(
         string='Code',

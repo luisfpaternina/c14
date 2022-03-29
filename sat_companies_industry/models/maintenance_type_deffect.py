@@ -8,7 +8,7 @@ class MaintenanceTypeDeffect(models.Model):
     _description = 'Type deffect'
 
     name = fields.Char(
-        String="Name",
+        string="Name",
         tracking=True)
     description = fields.Text(
         string="Description",

@@ -8,7 +8,7 @@ class ProjectTaskInspection(models.Model):
     _description = 'Inspections'
 
     name = fields.Char(
-        String="Periodicity",
+        string="Periodicity",
         tracking=True)
     active = fields.Boolean(
         string="Active",
