@@ -7,12 +7,18 @@ class ProjectTaskTypeAssociated(models.Model):
     _inherit = 'mail.thread'
     _description = 'Types of associated tasks'
 
-    name = fields.Char(string="Name",tracking=True)
-    code = fields.Char(string="Code",tracking=True)
+    name = fields.Char(
+        string="Name",
+        tracking=True)
+    code = fields.Char(
+        string="Code",
+        tracking=True)
     description = fields.Char(
         string="Description",
         tracking=True)
-    type_ot = fields.Char(string="Type OT",tracking=True)
+    type_ot = fields.Char(
+        string="Type OT",
+        tracking=True)
 
 
     @api.onchange('name')

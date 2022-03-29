@@ -8,9 +8,15 @@ class ProjectTaskOtType(models.Model):
     _description = 'OT type'
     _rec_name = 'code'
 
-    code = fields.Char(string="Code", tracking=True)
-    ot_type = fields.Char(string="Type", tracking=True)
-    description = fields.Text("Description", tracking=True)
+    code = fields.Char(
+        string="Code",
+        tracking=True)
+    ot_type = fields.Char(
+        string="Type",
+        tracking=True)
+    description = fields.Text(
+        "Description",
+        tracking=True)
 
 
     @api.onchange('code','ot_type','description')

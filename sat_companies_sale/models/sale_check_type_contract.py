@@ -7,7 +7,7 @@ class SaleCheckTypeContract(models.Model):
 
     name = fields.Char()
     item = fields.Integer(
-        strore="True")
+        store=True)
     type_service_id = fields.Many2one(
         'sale.type.service',
         'Type Service')
