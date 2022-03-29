@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class WizardQrMobileScanner(models.TransientModel):
     _name = 'wizard.qr.mobile.scanner'
+    _description = 'mobile scanner'
 
     name = fields.Char('')
     qr_scanner = fields.Char(
