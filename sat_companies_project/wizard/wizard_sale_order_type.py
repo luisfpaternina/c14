@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 class WizardSaleOrderType(models.TransientModel):
     _name = 'wizard.sale.order.type'
+    _description = 'Tipo de presupuesto'
 
     name = fields.Char('')
     sale_order_id = fields.Many2one(
