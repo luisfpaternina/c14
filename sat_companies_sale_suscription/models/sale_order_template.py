@@ -10,7 +10,7 @@ class SaleOrderTemplateInherit(models.Model):
         string="Sale type")
     type_contract = fields.Selection([
         ('normal','Normal'),
-        ('risk','All risk')],string="Type of contract",tracking=True)
+        ('risk','All risk')],string="Type of contract")
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type')
 
