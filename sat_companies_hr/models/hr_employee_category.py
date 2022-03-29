@@ -8,7 +8,7 @@ class HrEmployeeCategory(models.Model):
     _description = 'Employee category'
 
     name = fields.Char(
-        String="Employee's category",
+        string="Employee's category",
         tracking=True)
     active = fields.Boolean(
         string="Active",
