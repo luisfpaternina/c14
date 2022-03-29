@@ -30,9 +30,9 @@ class ProductQrGenerator(models.Model):
                                     string="Code")
     to_zone_location = fields.Char(related="to_zone.code",
                                   string="Code")
-    check_pit = fields.Boolean(String = 'Pit', tracking=True)
-    check_cabin = fields.Boolean(String = 'Cabin', tracking=True)
-    check_machine = fields.Boolean(String = 'Machine', tracking=True)
+    check_pit = fields.Boolean(string = 'Pit', tracking=True)
+    check_cabin = fields.Boolean(string = 'Cabin', tracking=True)
+    check_machine = fields.Boolean(string = 'Machine', tracking=True)
     product_pit_qr_code = fields.Char('QR Code Pit')
     qr_code_pit = fields.Binary('QR Code Image Pit')
     qr_code_pit_name = fields.Char(default="qr_code_pit.png")
