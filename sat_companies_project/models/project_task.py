@@ -46,13 +46,13 @@ class ProjectTaskInherit(models.Model):
         string="Name",
         related='to_zone.name')
     qr_scanner = fields.Char(
-        String = 'Qr Scanner')
+        string = 'Qr Scanner')
     check_pit = fields.Boolean(
-        String = 'Pit', tracking=True)
+        string = 'Pit', tracking=True)
     check_cabine = fields.Boolean(
-        String = 'Cabine', tracking=True)
+        string = 'Cabine', tracking=True)
     check_machine = fields.Boolean(
-        String = 'Machine', tracking=True)
+        string = 'Machine', tracking=True)
     qr_pit = fields.Binary(
         'Dowload Qr Image Pit',
         related="product_id.qr_pit")
